@@ -1,0 +1,9 @@
+h:\Uri150\Uri150\bin\Debug\Uri150.exe
+h:\Uri150\Uri150\bin\Debug\Uri150.pdb
+h:\Uri150\Uri150\obj\Debug\Uri150.csprojAssemblyReference.cache
+h:\Uri150\Uri150\obj\Debug\Uri150.Form1.resources
+h:\Uri150\Uri150\obj\Debug\Uri150.Properties.Resources.resources
+h:\Uri150\Uri150\obj\Debug\Uri150.csproj.GenerateResource.cache
+h:\Uri150\Uri150\obj\Debug\Uri150.csproj.CoreCompileInputs.cache
+h:\Uri150\Uri150\obj\Debug\Uri150.exe
+h:\Uri150\Uri150\obj\Debug\Uri150.pdb
