@@ -148,3 +148,51 @@ ID:0000000000005
   Vc  -        0 mmol/L
   
 
+
+2020.08.31 16:13:44 NO.000003ID:0000000003351 Sex:         Age: Color:         Clarity:         2020-08-04  10:26:39  *LEU +2    125 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +3     100 umol/L *PRO +3      >=3.0 g/L  GLU -        0 mmol/L  SG         1.005      *BLD +3    200 CELL/uL  pH         7.5         Vc  -        0 mmol/L  
+
+2020.08.31 16:16:15 NO.000003ID:0000000003351 Sex:         Age: Color:         Clarity:         2020-08-04  10:26:39   *LEU +2    125 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +3     100 umol/L *PRO +3      >=3.0 g/L  GLU -        0 mmol/L  SG         1.005      *BLD +3    200 CELL/uL  pH         7.5         Vc  -        0 mmol/L  
+
+2020.08.31 16:16:41 NO.000003ID:0000000003351 Sex:         Age: Color:         Clarity:         2020-08-04  10:26:39   *LEU +2    125 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +3     100 umol/L *PRO +3      >=3.0 g/L  GLU -        0 mmol/L  SG         1.005      *BLD +3    200 CELL/uL   pH         7.5         Vc  -        0 mmol/L
+
+2020.09.01 15:30:34   NO.000008ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:03:53  *LEU +-     15 CELL/uL *KET +-     0.5 mmol/L  NIT -                 *URO +1      33 umol/L *BIL +2      33 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.005       BLD -       0 CELL/uL  pH         6.0        *Vc  +-     0.6 mmol/L
+
+2020.09.01 15:34:33   NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.09.01 15:42:49   NO.000014ID:0000000040678 Sex:         Age: Color:         Clarity:         2020-08-29  11:01:07TROUBLE-07
+
+2020.09.01 17:07:48   NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.09.01 17:07:58   NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
+
+2020.09.01 17:10:25   NO.000011ID:0000000038872 Sex:         Age: Color:         Clarity:         2020-08-30  12:44:53TROUBLE-07
+
+2020.09.01 17:17:02   NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
+
+2020.09.01 17:25:14   NO.000011ID:0000000038872 Sex:         Age: Color:         Clarity:         2020-08-30  12:44:53TROUBLE-07
+
+2020.09.01 17:25:48   NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.09.01 17:25:55   NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
+
+2020.09.01 17:27:14   NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
+
+2020.10.20 15:53:38   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.20 16:00:48   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 14:56:02   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 14:57:03   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 14:58:49   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 15:02:08   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 15:03:39   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 15:04:02   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 15:04:59   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
+
+2020.10.21 15:05:08   NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  

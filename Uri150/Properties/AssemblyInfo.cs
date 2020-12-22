@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MBA")]
 [assembly: AssemblyProduct("Uri150")]
-[assembly: AssemblyCopyright("Copyright ©  2020 Vladimir Maltapar")]
+[assembly: AssemblyCopyright("Copyright ©  2020-2021 Vladimir Maltapar")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.1")]
-[assembly: AssemblyFileVersion("2.3.4.5")]
+[assembly: AssemblyVersion("1.7.0.103")]
+[assembly: AssemblyFileVersion("2020.12.22.1119")]
 [assembly: NeutralResourcesLanguage("en")]
 

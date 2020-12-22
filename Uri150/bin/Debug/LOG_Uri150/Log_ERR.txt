@@ -60,3 +60,47 @@ System.Data.SqlClient.SqlException: Символьные или двоичные данные могут быть ус
 2020.08.29 07:25:22 Аварийное завершение работы.
 Ошибка открытия порта Com6.
 Порт 'Com6' не существует.
+
+2020.08.31 15:40:26 Ошибка открытия порта
+
+2020.08.31 15:40:26 Аварийное завершение работы.
+Ошибка открытия порта Com6.
+Порт 'Com6' не существует.
+
+2020.08.31 15:44:17 Ошибка открытия порта
+
+2020.08.31 15:44:17 Аварийное завершение работы.
+Ошибка открытия порта Com2.
+Доступ к порту 'Com2' закрыт.
+
+2020.08.31 15:44:17 Ошибка открытия порта
+
+2020.08.31 15:44:17 Аварийное завершение работы.
+Ошибка открытия порта Com2.
+Доступ к порту 'Com2' закрыт.
+
+2020.09.01 17:10:26 Ошибка при записи в SQL. Номер истории: 38872, номер теста: 000011.
+System.Data.SqlClient.SqlException: Неправильный синтаксис около конструкции ",".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   в System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Uri150.Form1.ToSQL(String st) в H:\Uri150\Uri150\Form1.cs:строка 591
+
+2020.09.03 17:42:25 Ошибка открытия порта
+
+2020.09.03 17:42:26 Аварийное завершение работы.
+Ошибка открытия порта Com1.
+Доступ к порту 'Com1' закрыт.
+
+2020.10.20 15:53:50 Ошибка при записи в SQL. Номер истории: 40651, номер теста: 000007.
+System.Data.SqlClient.SqlException: Неправильный синтаксис около конструкции ",".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   в System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Uri150.Form1.ToSQL(String st) в H:\Uri150\Uri150\Form1.cs:строка 590

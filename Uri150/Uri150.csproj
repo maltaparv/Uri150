@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Uri150_s.ico</ApplicationIcon>
+    <ApplicationIcon>speech-balloon-orange-u256_icon-icons.com_62592.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,7 +99,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\parameters.ico" />
     <Content Include="Resources\Uri150_s.ico" />
+    <Content Include="speech-balloon-orange-u256_icon-icons.com_62592.ico" />
     <Content Include="Uri150_s.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

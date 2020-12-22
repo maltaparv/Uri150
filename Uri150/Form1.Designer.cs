@@ -46,12 +46,10 @@
             this.Lbl_v3 = new System.Windows.Forms.Label();
             this.Lbl_v2 = new System.Windows.Forms.Label();
             this.Lbl_v1 = new System.Windows.Forms.Label();
-            this.Lbl_IP_List = new System.Windows.Forms.Label();
             this.Lbl_log = new System.Windows.Forms.Label();
             this.Lbl_IP = new System.Windows.Forms.Label();
             this.Lbl_State = new System.Windows.Forms.Label();
             this.lbl_dtm = new System.Windows.Forms.Label();
-            this.BtnClear = new System.Windows.Forms.Button();
             this.Lbl_Comp_User = new System.Windows.Forms.Label();
             this.Lbl_dtm_ver = new System.Windows.Forms.Label();
             this.BtnRunTest = new System.Windows.Forms.Button();
@@ -81,7 +79,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.выделитьвсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,7 +105,7 @@
             // Lbl_AutoVersion
             // 
             this.Lbl_AutoVersion.AutoSize = true;
-            this.Lbl_AutoVersion.Location = new System.Drawing.Point(327, 46);
+            this.Lbl_AutoVersion.Location = new System.Drawing.Point(391, 46);
             this.Lbl_AutoVersion.Name = "Lbl_AutoVersion";
             this.Lbl_AutoVersion.Size = new System.Drawing.Size(64, 13);
             this.Lbl_AutoVersion.TabIndex = 141;
@@ -155,7 +152,7 @@
             // lblMes1
             // 
             this.lblMes1.AutoSize = true;
-            this.lblMes1.Location = new System.Drawing.Point(63, 165);
+            this.lblMes1.Location = new System.Drawing.Point(61, 164);
             this.lblMes1.Name = "lblMes1";
             this.lblMes1.Size = new System.Drawing.Size(63, 13);
             this.lblMes1.TabIndex = 136;
@@ -263,15 +260,6 @@
             this.Lbl_v1.TabIndex = 126;
             this.Lbl_v1.Text = "Напоминалка - строка 1";
             // 
-            // Lbl_IP_List
-            // 
-            this.Lbl_IP_List.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_IP_List.Location = new System.Drawing.Point(52, 203);
-            this.Lbl_IP_List.Name = "Lbl_IP_List";
-            this.Lbl_IP_List.Size = new System.Drawing.Size(214, 18);
-            this.Lbl_IP_List.TabIndex = 125;
-            this.Lbl_IP_List.Text = "IP:  список всех сетвых карт";
-            // 
             // Lbl_log
             // 
             this.Lbl_log.AutoSize = true;
@@ -285,7 +273,7 @@
             // 
             this.Lbl_IP.AutoSize = true;
             this.Lbl_IP.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_IP.Location = new System.Drawing.Point(52, 188);
+            this.Lbl_IP.Location = new System.Drawing.Point(10, 197);
             this.Lbl_IP.Name = "Lbl_IP";
             this.Lbl_IP.Size = new System.Drawing.Size(147, 13);
             this.Lbl_IP.TabIndex = 123;
@@ -311,15 +299,6 @@
             this.lbl_dtm.TabIndex = 121;
             this.lbl_dtm.Text = "Дата-время начала";
             // 
-            // BtnClear
-            // 
-            this.BtnClear.Location = new System.Drawing.Point(5, 192);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(40, 28);
-            this.BtnClear.TabIndex = 120;
-            this.BtnClear.Text = "clear";
-            this.BtnClear.UseVisualStyleBackColor = true;
-            // 
             // Lbl_Comp_User
             // 
             this.Lbl_Comp_User.AutoSize = true;
@@ -333,11 +312,11 @@
             // Lbl_dtm_ver
             // 
             this.Lbl_dtm_ver.AutoSize = true;
-            this.Lbl_dtm_ver.Location = new System.Drawing.Point(327, 29);
+            this.Lbl_dtm_ver.Location = new System.Drawing.Point(391, 29);
             this.Lbl_dtm_ver.Name = "Lbl_dtm_ver";
             this.Lbl_dtm_ver.Size = new System.Drawing.Size(127, 13);
             this.Lbl_dtm_ver.TabIndex = 118;
-            this.Lbl_dtm_ver.Text = "Версия от 26.08.2020 :))";
+            this.Lbl_dtm_ver.Text = "Версия от 20.10.2020 :))";
             // 
             // BtnRunTest
             // 
@@ -348,6 +327,7 @@
             this.BtnRunTest.TabIndex = 117;
             this.BtnRunTest.Text = "Выполнить";
             this.BtnRunTest.UseVisualStyleBackColor = true;
+            this.BtnRunTest.Click += new System.EventHandler(this.BtnRunTest_Click);
             // 
             // label1
             // 
@@ -496,6 +476,7 @@
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.выходToolStripMenuItem.Text = "Вы&ход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
             // правкаToolStripMenuItem
             // 
@@ -572,23 +553,18 @@
             // сервисToolStripMenuItem
             // 
             this.сервисToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem,
             this.параметрыToolStripMenuItem});
             this.сервисToolStripMenuItem.Name = "сервисToolStripMenuItem";
             this.сервисToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.сервисToolStripMenuItem.Text = "&Сервис";
             // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.настройкиToolStripMenuItem.Text = "&Настройки";
-            // 
             // параметрыToolStripMenuItem
             // 
+            this.параметрыToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("параметрыToolStripMenuItem.Image")));
             this.параметрыToolStripMenuItem.Name = "параметрыToolStripMenuItem";
             this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.параметрыToolStripMenuItem.Text = "&Параметры";
+            this.параметрыToolStripMenuItem.Click += new System.EventHandler(this.ПараметрыToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -630,6 +606,7 @@
             this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
             this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
+            this.опрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОпрограммеToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -655,12 +632,10 @@
             this.Controls.Add(this.Lbl_v3);
             this.Controls.Add(this.Lbl_v2);
             this.Controls.Add(this.Lbl_v1);
-            this.Controls.Add(this.Lbl_IP_List);
             this.Controls.Add(this.Lbl_log);
             this.Controls.Add(this.Lbl_IP);
             this.Controls.Add(this.Lbl_State);
             this.Controls.Add(this.lbl_dtm);
-            this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.Lbl_Comp_User);
             this.Controls.Add(this.Lbl_dtm_ver);
             this.Controls.Add(this.BtnRunTest);
@@ -671,6 +646,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "  Драйвер  анализатора мочи UriLit-150.";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Cat)).EndInit();
@@ -701,12 +679,10 @@
         private System.Windows.Forms.Label Lbl_v3;
         private System.Windows.Forms.Label Lbl_v2;
         private System.Windows.Forms.Label Lbl_v1;
-        private System.Windows.Forms.Label Lbl_IP_List;
         private System.Windows.Forms.Label Lbl_log;
         private System.Windows.Forms.Label Lbl_IP;
         private System.Windows.Forms.Label Lbl_State;
         private System.Windows.Forms.Label lbl_dtm;
-        private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Label Lbl_Comp_User;
         private System.Windows.Forms.Label Lbl_dtm_ver;
         private System.Windows.Forms.Button BtnRunTest;
@@ -736,7 +712,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem выделитьвсеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сервисToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem параметрыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem содержаниеToolStripMenuItem;

@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Reflection;
+using System.Net.Sockets;
 #region --- лицензия GNU
 //                           LICENSE INFORMATION
 // Urine Analyzer Driver, serial port & SQL communications. Version 1.001.01.
@@ -47,6 +48,8 @@ namespace Uri150
         private static int MaxCntAn = 22;  // максимальное кол-во анализов одного пациента, 
                                            // передаваемых в MS-SQL за 1 раз
                                            // (это ограничение структуры AnalyserResults :((  )
+        private static int MaxHistNo = 9;  // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
+                                           // берётся из .ini-файла
         private static string sModes;      // строка списка режимов работы 
                                            // режим: WriteToSQL=Yes или No
                                            // режим: (NoComPort) - работать, даже ели на комп. нет COM-порта
@@ -62,9 +65,9 @@ namespace Uri150
         private static string PathLog;     // путь к лог-файлу с вычисленными каталогом и датой ...\GGGG-MM\Uri150_2020-08-06.txt 
         private static string PathLogParm; // путь к лог-файлу, заданный в параметрах ini-файла  
         private static string PathErrLog;  // путь к лог-файлу ошибок 
-        private static string fnPathIni;   // путь+имя ini-файла (как и имя запущенной программы)
-        private static string strParse1, strParse2;
-
+        private static string pathIniFile; // путь+имя ini-файла (как и имя запущенной программы)
+        private static string[] str_ini;   // строки ini-файла
+        
         // глобальные
         private static DateTime dt0 = DateTime.Now; // время старта / (пред)последнего приёма данных
         private static DateTime dtm = dt0;          // время последнего приёма данных
@@ -73,24 +76,27 @@ namespace Uri150
         public SerialPort _serialPort;
         private string PathIni;         // Путь к ini-файлу (пусть будет там, откуда запуск? пока так!)
         private static string AppName;  // static т.к. исп. в background-процессе
-        private static string qkreq = ""; // запрос о работе ("кукареку")
+        private static string AppVer="Версия 1.7 ";   // 2020-09-03, 2020-10-21
+        private static string qkrq = ""; // ToDo запрос о работе ("кукареку") 
         private static string strV1, strV2, strV3, strV4, strV5; // на форме - напоминалки :)
         private static string dateDone = "2020-12-31 23:59";  // дата-время выполнения анализа по часам на анализаторе
-        private static string dateDone999 = "31-12-2020 23:59:00.000";  // дата-время выполнения анализа для SQL
+        private static string dateDone999 = "31-12-2020 23:59:00.000";  // дата-время выполнения анализа для SQL ResultDate
         // начальные значения дла нового пациента
-        //private static int    kAn = 0; // количество анализов у одного пациента - для UriLi-150 ВСЕГДА 11 анализов!
+        private static int    kAn = 0; // количество анализов у одного пациента - для UriLi-150 ВСЕГДА 11 анализов!
         //private static string s0 = ""; // формирование строки для SQL ResultText
         private static string s1 = "Insert into ... инициализация в InitSQLstr";
         private static string s2 = "values (... ... инициализация в InitSQLstr";
         private string inputString = ""; // полученные и собранные вместе за сеанс передачи данные для парсинга
-        private static Int32 nHistNo = -1;
+        private static Int64 nHistNo = -1;
         private string testNo = "";      // порядковый номер теста, присваиваемый анализатором, и он его каждый раз увеличивет на 1.
         private int kTest = 0;           // кол-во переданных тестов с начала работы драйвера - считает программа!
         private int kPart = 0;           // кол-во частей передачи данных для одного пациетна
         private int kLines = 0;          // кол-во строк в переданном анализе
         private string msg = "---";      // последнее китайстое предупреждение :))
-        private char SoT = '\x02';       // (символ "улыбка") 02h -  начало передачи
-        private char EoT = '\x03';       // (символ "черви")  03h -  конец передачи
+        private char STX = '\x02';       // (символ "улыбка") 02h -  начало передачи
+        private char ETX = '\x03';       // (символ "черви")  03h -  конец передачи
+        private int F_Remind = 0;        // флаг - напоминалки. =0 по умолчанию - не отображать напоминалки
+        private Random rnd = new Random(32123);
         #endregion --- Общие параметры 
         public Form1()      // всё, что нажито непосильным трудом, ... 
         {
@@ -99,14 +105,12 @@ namespace Uri150
             FormIni();              // установки на форме, которые не делает Visual Studio - IP-адреса
             PortIni();              // начальные установки сом-порта
         }
-        private void FormIni()  // мой начальный вывод на форму, что прочитали из ini-файла
+        private void FormIni()  // начальный вывод на форму - что прочитали из ini-файла
         {
-            string Host = Dns.GetHostName();
-            IPHostEntry host = Dns.GetHostByName(Host);
-            string myIP = "";
-            foreach (IPAddress ip in host.AddressList) myIP += ip.ToString() + "  ";
-            Lbl_IP_List.Text = $"все IP: {myIP}";
-            string IP = Dns.GetHostByName(Host).AddressList[0].ToString();
+            var host = Dns.GetHostEntry(Dns.GetHostName()).AddressList;
+            var list_adr = from ip in host where ip.ToString().Length < 16 select ip.ToString();
+            string IP = "";
+            foreach (string st in list_adr) IP += st + " ";
             Lbl_IP.Text = "IP: " + IP;
             CmbTest.SelectedIndex = 0;  // первый (нулевой) элемент - текущий, видимый.
         }
@@ -191,7 +195,7 @@ namespace Uri150
             if (sDebugModes.IndexOf("лог частей") >= 0) // для режима отладки - лог частей получаемых данных     
                 WLog($"--- {kPart} часть, {receivedData.Count()} байт, receivedData: {receivedData}");
 
-            int nEoT = receivedData.IndexOf(EoT);
+            int nEoT = receivedData.IndexOf(ETX);
             if (nEoT >= 0)
             {
                 kTest++;
@@ -207,7 +211,7 @@ namespace Uri150
                 Add_RTB(RTBout, $"\n{ss} Begin test {kTest}.", Color.DarkMagenta);
                 Add_RTB(RTBout, $"\n{inputString}", Color.Black);
 
-                Parse150();  // вызвать обработчик ...
+                Parse150();  // обработчик для UriLit150
 
                 Add_RTB(RTBout, $"\n{ss} End test {kTest}, lines {kLines}.", Color.DarkMagenta);
                 // очистить inputString  для повторного приёма данных
@@ -217,16 +221,15 @@ namespace Uri150
             }
             else
             {
-                qkreq = $"{kPart}- часть, {stLength} байт. Время:{dtm}.";
-                msg = qkreq + " - msg изм. в CombineParts()";
+                msg = $"{kPart}- часть, {stLength} байт. Время:{dtm}. - msg изм. в CombineParts()";
             }
         }
 
         private void Parse150() // ================= ПАРСИНГ ПОЛУЧЕННЫХ ДАННЫХ для UriLit-150 ===================
         {
+            #region --- описание получаемых данных
             /* Пример передаваемых данных: 
              * (в первой строке - <02h>, затем - новая строка  <0D0Ah>, <...данные... >, самый последний байт с новой строки - <03h>)
-             * строки пронумерованы для удобства с 01 по 27.
             00<02h>
             01NO.000003
             02ID:0000000003351
@@ -254,19 +257,26 @@ namespace Uri150
             24  Vc  -        0 mmol/L
             25  
             26 <03h>
+                Это уже третий алгоритм разбора полученных данных! Почему-то количество реально передаваемых строк
+                не соответствует количеству строк, описанной в документации. Реально не совпадает количество полученных байт!
+                И иногода (спонтпнно) оно меняется! Почему - не удалось выяснить. (Результаты не воспроизводились).
+                Из практического опыта исвестно, что в переданных данных должны присутствовать 11 результатов измерения
+                (кроме случаев ошибки - тогда в данных должна быть строка trouble-n, где n-номер ошибки,
+                и кроме калибровочных тестов, которые мне не дали делать, т.к. калибровочных тест-полосои всего две).
+                Поэтому алглритм следующий:
+                Из каждой полученной строчки пробуем выделить один из возможных 11 анализов.
+                Если есть нужный анализ из 11-ти - формируем строку SQL, дописывая выделенные даные в конец.
+                Тогда (предположительно) даже для других типов тест-полосок, на которых есть дополнительные анализы:
+                - "CR", "MA", "Ca", "ACR" - этот алгоритм должен работать! (Не проверял, т.к. нет тест-полосок 14G и других)
             */
+            #endregion --- описание получаемых данных
             Pic_Cat.Visible = false;
+            if (F_Remind == 1) RemindText(); // обновить напоминалки в основном окне
             Lbl_State.ForeColor = Color.Blue;
             Lbl_State.Text = "парсинг...";
-            string[] Line = inputString.Split(new[] {'\r', '\n', SoT, EoT}, StringSplitOptions.RemoveEmptyEntries);
+            string[] Line = inputString.Split(new[] {'\r', '\n', STX, ETX}, StringSplitOptions.RemoveEmptyEntries);
             //string[] Line = inputString.Split(new[] { '\r', '\n' });  // без  игнорирования пустых строк.
             kLines = Line.Count();
-
-            // если это квиток с ошибкой, а не обычный результват измерения, то там не 27 строк, а меньше.
-            // if (kLines != 27)
-            // Это квиток с ошибкой или контроли или другой тест-полоска, не тип G11 !!!
-            // exit
-
             msg = $"Количество строк: {kLines}.";
             Add_RTB(RTBout, msg, Color.DarkBlue);
             WLog(msg);
@@ -281,14 +291,14 @@ namespace Uri150
             }
             // получаем всё для формирования строки SQL
             int n = 0; // номер строкИ после разбиения данных на стрОки
-            string s = "---test---", ss = "";
+            string s = "---test---", cHistNo = "";
             string[] PivTab = new string[27]; // строчки для результатов, которые пойдут в сводную таблицу
 
             // 0-я строка содержит 1 пробел (почему?) (признаки начала и конца 02h и 03h отбросили при разбиении по строкам :)
             // 1-я строка - порядковый номер пробы (исследования) - анализатор автоматически увеличивает его на 1 для следующей пробы
             //  0123456789 123456789 1
             //01NO.000003  - это порядковый номер теста, присваиваемый анализатором, увеличивающийся на 1.
-            n = 1; s = Line[n];
+            n = 1; s = Line[n]; 
             testNo = s.Substring(3);  // порядковый номер теста, присваиваемый анализатором, и он его каждый раз увеличивет на 1.
                                       //dateDone999 += ":00." + String.Format("{0:d3}", testNo); // testNo (27) в виде "027" - для тысячных долей секунд
             testNo = testNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №3 26.08.2020 :) 
@@ -299,14 +309,21 @@ namespace Uri150
             n = 2; s = Line[n];
             if (s.Substring(0, 3) != "ID:")  // это "контроли" мочевика?
             {
-                msg = "Это контроль? (Контроли игнорируются).";
+                msg = "Это контроль? (Нет ID:) - Контроли игнорируются!";
                 Add_RTB(RTBout, msg, Color.Red);
                 WLog(msg);
                 return;
             }
-            ss = s.Substring(3);
-            ss = ss.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
-            nHistNo = ss.Length < 13 ? (0) : (Convert.ToInt32(ss));
+            cHistNo = s.Substring(3);
+            cHistNo = cHistNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
+            cHistNo = cHistNo.TrimStart('0');  // все нули слева удалить
+            nHistNo = cHistNo.Length == 0 ? (0) : (Convert.ToInt64(cHistNo));
+            Add_RTB(RTBout, $"\n cHistNo: {cHistNo}, nHistNo: {nHistNo}.", Color.Red);
+            if (nHistNo > MaxHistNo)
+            {
+                Add_RTB(RTBout, $"\n\n Введённый номер истории {nHistNo} больше максимально допустимого {MaxHistNo}!", Color.Red);
+                nHistNo = 0;
+            }
 
             if (nHistNo == 0)
             {
@@ -314,7 +331,6 @@ namespace Uri150
                 if (sDebugModes.IndexOf("лог пациентов без номера истории") >= 0) // для режима отладки - логирование
                     WTest("Log_HistNo_0", err1);
                 Add_RTB(RTBout, $"\n{err1}", Color.Red);
-                //rc = 1; // продолжать обработку
             }
 
             // далее 6 строк игнорируем:  (на анализаторе результат не печатается, лаборанты пишут ручками :))
@@ -327,13 +343,12 @@ namespace Uri150
 
             //09 2020-08-04  10:26:39
             //  0123456789 123456789 1
-            //n = 9; s = Line[n];
             n = 7; s = Line[n];
             dateDone = s.Substring(1, 20);
             //                        ДД                        ММ                        ГГГГ                        
             dateDone999 = s.Substring(9, 2) + "-" + s.Substring(6, 2) + "-" + s.Substring(1, 4) + " "
                 + s.Substring(13, 2) + ":" + s.Substring(16, 2) + ":" + s.Substring(19, 2);  // надо в формате ДД-ММ-ГГГГ ЧЧ:ММ:СС.МММ
-            //                ЧЧ                         ММ                      CC                        
+            //                ЧЧ                         ММ                         CC                        
             //    + s.Substring(13, 2) + ":" + s.Substring(16, 2) + ":" + s.Substring(19, 2) + ".000"; // надо в формате ДД-ММ-ГГГГ ЧЧ:ММ:СС.МММ
             //dateDone999 += ":" + s1.Substring(0, 2) + "." + s1.Substring(2, 2) + "0";
             st += $";{dateDone}";
@@ -348,7 +363,7 @@ namespace Uri150
             si = si.Replace("\n", "");
             //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{si.Replace($"\r\n", "__")}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
             // FIXME ?передаём в SQL без разделителей строк и признаков начала и конца передачи
-            //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{inputString.Replace($"\r\n"+SoT+EoT, "")}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
+            //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{inputString.Replace($"\r\n"+STX+ETX, "")}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
             //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{si}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
             s2 = $"VALUES({AnalyzerID},'{dateDone999}',host_name(),11,{nHistNo.ToString()}";    // ВНИМАНИЕ! CntParam=11 всегда - для тест-полосок G11. 
 
@@ -373,11 +388,11 @@ namespace Uri150
             if (sDebugModes.IndexOf("лог SQL") >= 0)
                 WTest($"Log_SQL", s1 + s2);
 
-            if (sModes.IndexOf("WriteToSQL=Yes") >= 0)
+            if (sModes.IndexOf("WriteToSQL=Yes") >= 0 & kAn>0 ) // строка SQL сформирована успешно
             {
                 WLog("SQL " + s1 + s2);
                 ToSQL(s1 + s2);
-                msg = $"SQL: Номер истории {nHistNo}, дата {dateDone999}. Номер анализатора: {testNo}.";
+                msg = $"SQL: Номер истории {nHistNo}, дата {dateDone999}. Номер пробы: {testNo}.";
                 Add_RTB(RTBout, $"\n{msg}\n", Color.DarkGreen);
             }
 
@@ -390,7 +405,7 @@ namespace Uri150
                 //rc = 1; // RetCode = 1 по умолчанию
                 int k = 0; // номер параметра (результата) для формирования строки SQL - ParamName1 (n=1), ParamValue1, ParamMsr1 ...
                 string sx = "+++"; // одна (текущая) строчка Line[i] из квиточка
-                string val, nam, mgr;
+                string val, nam, mgr, attention;
                 for (int i = 8; i < Line.Length; i++)  // не с первой: строки с результатами начинаются с ~8..11-й. FIXME !
                 {
                     sx = Line[i];
@@ -405,6 +420,7 @@ namespace Uri150
                     nam = "";
                     val = "";
                     mgr = "";
+                    attention = sx.Substring(1, 1);  // признак: " " -норма, "*" - результат выходит за референсные значения 
 
                     nam = sx.Substring(2, 3);
                     if (nam == "LEU" | nam == "KET" | nam == "BIL" | nam == "GLU" | nam == "BLD" | nam == "Vc ")
@@ -419,12 +435,15 @@ namespace Uri150
                         mgr = "";
                     }
 
-                    if (nam == "PRO" | nam == "PRO")
+                    if (nam == "PRO" | nam == "CR " | nam == "MA " | nam == "Ca " | nam == "ACR")
                     {
                         val = sx.Substring(5, 15);
                         mgr = sx.Substring(20);
                     }
 
+                    if (val.Length == 0)   // нет результата, ничего не нашли
+                         continue; // пропускаем неопознанную строку
+ 
                     // логирование белка
                     if (((nam == "PRO") & sModes.IndexOf("лог белка") >= 0) & (sx.Substring(1, 1) == "*"))
                         WTest("Log_PROTEIN", $"Номер истории {nHistNo}, No: {testNo}, дата: {dateDone}, {s}");
@@ -462,17 +481,32 @@ namespace Uri150
                     #endregion --- old calls
 
                     nam = nam.Trim();
-                    val = val.Trim();
+                    val = val.Trim().Replace("    ", " "); //т.к. val для URO не влезает в 16 символов (ограничение длины поля в SQL) 
                     mgr = mgr.Trim();
                     k++;   // k-тый параметр Param<k>
-                    s1 += $",ParamName{k},ParamValue{k},ParamMsr{k}";
-                    s2 += $",'{nam}','{val}','{mgr}'";
+                    //s1 += $",ParamName{k},ParamValue{k},ParamMsr{k}";
+                    //s2 += $",'{nam}','{val}','{mgr}'";
+                    s1 += $",ParamName{k},ParamValue{k},ParamMsr{k},Attention{k}";  // 2020-10-20
+                    s2 += $",'{nam}','{val}','{mgr}','{attention}'";
+
                     //st += $";{nam}";  //2020-08-20
                     //sc += $";{nam}";  // для EXCEL PivTab
-                    st += $"{nam};{val};{mgr};";
-                    WLog($"Строка {i}: {sx}. Выделен {k}-й: nam='{nam}', val='{val}', mgr='{mgr}'.");
+                    //st += $"{nam};{val};{mgr};";  // 2020-10-20
+                    st += $"{nam};{val};{mgr};{attention};";
+                    WLog($"Строка {i} (длина {sx.Length}): {sx}. Выделен {k}-й: nam='{nam}', val='{val}', mgr='{mgr}', attention='{attention}'.");
                     PivTab[k] = sc + $"{nam};{val};{mgr};";
                 }
+
+                if (k == 0)   // нет результата, ничего не нашли
+                {
+                    kAn = 0;    // кол-во выделенных анализов - используется как признак, писАть ли в SQL.
+                    s1 = ""; s2 = "";   // SQL строку не формируем 
+                    msg = "Не нашли ни одного результата!";
+                    Add_RTB(RTBout, "\n"+msg, Color.Red);
+                    WLog(msg);
+                    return;
+                }
+                kAn = k;
             }
         }
         // ---
@@ -481,30 +515,34 @@ namespace Uri150
             PathIni = Application.StartupPath;
             AppName = AppDomain.CurrentDomain.FriendlyName;
             AppName = AppName.Substring(0, AppName.IndexOf(".exe"));
-            fnPathIni = PathIni + @"\" + $"{AppName}" + ".ini";
-            if (!File.Exists(fnPathIni))
+            pathIniFile = PathIni + @"\" + $"{AppName}" + ".ini";
+            if (!File.Exists(pathIniFile))
             {
-                string errmsg = "Не найден файл " + fnPathIni;
+                string errmsg = "Не найден файл " + pathIniFile;
                 //WErrLog(errmsg);  /3/ А потому что нет ещё пути, где ErrLog! :)))
                 MessageBox.Show(errmsg, " Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 Environment.Exit(1);
             }
             //string dtVers = new System.IO.FileInfo(PathIni).CreationTime.ToString();
-            string dtVers = new System.IO.FileInfo(PathIni).LastWriteTime.ToString();
-            string curVer = "v.2.05.27";  // 2019-10-29 2019-11-04 2020-03-13 2020-03-23
-            dtVers = "Версия от " + dtVers + " " + curVer; // ИСПРАВИТЬ!!! "СТРАННАЯ" дата модификации файла!!! м.б. это дата записи?
-            Lbl_dtm_ver.Text = dtVers;
+            string dtVers = new System.IO.FileInfo(AppName+".exe").LastWriteTime.ToString();
+            AppVer += $" от {dtVers}.";  // 2020-09-01
+            Lbl_dtm_ver.Text = AppVer;
             ///*
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            var builtDate = new DateTime(2019, 1, 1).AddDays(version.Build).AddSeconds(version.Revision * 2);
-            var versionString = String.Format("версия {0} изм. {1}", version.ToString(2), builtDate.ToShortDateString());
+            //var version = Assembly.GetExecutingAssembly().GetName().Version;
+            //var builtDate = new DateTime(2019, 1, 1).AddDays(version.Build).AddSeconds(version.Revision * 2);
+            //var versionString = String.Format("версия {0} изм. {1}", version.ToString(2), builtDate.ToShortDateString());
+            // из AutoVersion 2:
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            var assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).FileVersion;
+            var versionString = version + ", " + fileVersion;
             Lbl_AutoVersion.Text = versionString;
             //*/
             lbl_dtm.Text = "Время старта: " + dt0.ToString();  //+ToDo: вывод на форму - время старта и путь ini-файла 
-            lbl_ini.Text = "ini-файл: " + fnPathIni;
-            string[] lines = File.ReadAllLines(fnPathIni, Encoding.GetEncoding(1251));
+            lbl_ini.Text = "ini-файл: " + pathIniFile;
+            string[] lines = File.ReadAllLines(pathIniFile, Encoding.GetEncoding(1251));
 
-            //  2-я строка: AnalyzerID: 9
+            //  2-я строка: AnalyzerID: 13
             string s = lines[1];    // 2-я строкa
             AnalyzerID = Convert.ToInt32(s.Substring(s.IndexOf(':') + 1, 2));
             //if (int.TryParse(lines[5], out AnalyzerID) ) AnalyzerID = 339;
@@ -521,28 +559,35 @@ namespace Uri150
             // (sModes.IndexOf("Все анализы одного пациента в одну строку") >= 0);
             // (sModes.IndexOf("WriteToSQL=Yes") >= 0);   
             // (sModes.IndexOf("Дата в SQL") >= 0);  // (GetDate)         
-            sDebugModes = lines[6].Trim();  // 7-я строкa: Режимы отладки 
+            sDebugModes = lines[6].Trim();           // 7-я строкa: Режимы отладки 
             Lbl_DebugModes.Text = sDebugModes;
-            // 8-я строка: <резерв>
+            MaxHistNo = Convert.ToInt32(lines[7].Trim());          // 8-я строка:  макс. номер истории
             PathLogParm = lines[8].Trim();  // 9-я строка 
             Lbl_log.Text = "путь к логам: " + PathLogParm;
             SetPathLog();
             PathErrLog = lines[9];          // 10-я строка 
-            //PathErrLog += @"\ErrLog.txt";
-            //PathErrLog = Path.GetFullPath(PathErrLog);
-            strParse1 = lines[10];          // 11-я строка <резерв>
-            strParse2 = lines[11];          // 12-я строка <резерв>
-            qkreq = lines[12]; // 13-я строка                        !!! для ответа на запрос о рaботе = доделать!
+            string sRemind = lines[10];  // 11-я строка: флаг изменения режима отображения напоминалок: 1 - показывать, иначе - нет.
+            int.TryParse(sRemind, out F_Remind); // F_Remind == 0 or 1
+                               // 12-я строка: <резерв>
+            qkrq  = lines[12]; // 13-я строка  ToDo ! для ответа на запрос о рaботе = доделать!
             strV1 = lines[13]; // 14-я строка
             strV2 = lines[14]; // 15-я строка
             strV3 = lines[15]; // 16-я строка
             strV4 = lines[16]; // 17-я строка
-            strV5 = lines[17]; // 18 cтрока
-            Lbl_v1.Text = strV1;
-            Lbl_v2.Text = strV2;
-            Lbl_v3.Text = strV3;
-            Lbl_v4.Text = strV4;
-            Lbl_v5.Text = strV5;
+            strV5 = lines[17]; // 18-я  cтрока
+            Lbl_v1.Text = "";
+            Lbl_v2.Text = "";
+            Lbl_v3.Text = "";
+            Lbl_v4.Text = "";
+            Lbl_v5.Text = "";
+            if (F_Remind == 1)
+            {
+                Lbl_v1.Text = strV1;
+                Lbl_v2.Text = strV2;
+                Lbl_v3.Text = strV3;
+                Lbl_v4.Text = strV4;
+                Lbl_v5.Text = strV5;
+            }
 
             Lbl_Comp_User.Text = $"Computer: {ComputerName}, User: {UserName}";
             WLog($"--- Запуск {AppName} {ComputerName} {UserName} {dtVers}");
@@ -577,6 +622,41 @@ namespace Uri150
             }
         }
         #region --- ( Easter eggs :))
+        private void RemindText() // Текст напоминалок - отображается в основном окне
+        {
+            str_ini = File.ReadAllLines(pathIniFile, Encoding.GetEncoding(1251));
+            // для случайного
+            int k1 = 0, k2 = 0, k3 = 0, k4 = 0;
+            for (int i = 0; i < str_ini.Length; i++)
+            {
+                if (str_ini[i].IndexOf("*** start test ***") != -1) k1 = i; // ограничитель начала напоминалок
+                if (str_ini[i].IndexOf("*** end test ***") != -1) k2 = i; // ограничитель конца  напоминалок
+            }
+            if ((k1 < k2) & (k1 != 0) & (k2 != 0))
+            {
+                k1++; k2--;  // текст по 5 строк с k1 - начало, по k2 - конец  (весь текст в ini-файле :)
+                //Random rnd = new Random();       // сразу в глобальных c инициализацией
+                int irand = rnd.Next(0, k2 - k1);  //очередное  случайное число в диапазоне k1 - k2.
+                k3 = irand / 5;
+                k4 = k1 + k3 * 5; // по 5 строк на "напоминалку" - strV1-strV5 
+                strV1 = str_ini[k4];
+                strV2 = str_ini[k4 + 1];
+                strV3 = str_ini[k4 + 2];
+                strV4 = str_ini[k4 + 3];
+                strV5 = str_ini[k4 + 4];
+                Lbl_v1.Text = strV1;
+                Lbl_v2.Text = strV2;
+                Lbl_v3.Text = strV3;
+                Lbl_v4.Text = strV4;
+                Lbl_v5.Text = strV5;
+                Lbl_v1.Show();
+                Lbl_v2.Show();
+                Lbl_v3.Show();
+                Lbl_v4.Show();
+                Lbl_v5.Show();
+                //Stat1.Text = $"ir={irand}, k1={k1}, k2={k2}, k3={k3}, k4={k4}.";
+            }
+        }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             //pictureBox2.Visible = !pictureBox2.Visible;
@@ -689,24 +769,87 @@ namespace Uri150
             // Nohing to do! :))
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e) // закрыть App
+        private void Form1_Load(object sender, EventArgs e)
         {
-            string mess = "Завершение работы.";
+            //MessageBox.Show("mess - Что нажали?", "title - заголовок"
+            //    , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+
+        private void ПараметрыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Меню / Сервис / Параметры в.ini - файле:
+            string s = "";
+            string nameSQLsrv = connStr.Substring(0, connStr.IndexOf(';'));
+            string sep = $"---------------------------------------------------------------------------\n";
+            // 2020-04-07 из надстойки Automatic Version 2
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            var assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).FileVersion;
+            var productVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).ProductVersion;
+            //s += $"         {sHeader1}\n";
+            int n1 = connStr.IndexOf('=') + 1;
+            int n2 = connStr.IndexOf(';') - n1;
+            s += $"AppName: {AppName}\n";
+            s += $"AnalyzerID: {AnalyzerID.ToString()}\n";
+            s += $"ComPortNo: {ComPortNo}\n";
+            s += $"Server: {connStr.Substring(n1, n2)}\n";
+            s += sep;
+            s += $"ComputerName: {ComputerName}, UserName: {UserName}\n";
+            s += sep;
+            s += $"путь к логам:\n";
+            s += $"PathLog: {PathLogParm}\n";
+            s += $"PathErrLog: {PathErrLog}\n";
+            s += $"PathIni: {PathIni}\n";
+            s += sep;
+            s += $"Режимы работы: {sModes}\n";
+            //s += $"SQL: {nameSQLsrv}, Analyzer_Id: {Analyzer_Id}\n";
+            s += sep + "\n\n\n\n";
+            DialogResult result = MessageBox.Show(s, "  Параметры в .ini-файле:"
+                , MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ExitApp("Выход по меню <Выход>");
+            string mess = "Завершение работы драйвера анализатора.";
             DialogResult result = MessageBox.Show("Вы действительно хотите завершить работу?"
+                , mess, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ExitApp("Выход из меню<Выход>");
+            }
+            else
+            {
+                WLog("--- хотел выйти из меню <Выход>, но передумал :) ");
+            }
+        }
+
+        private void ОпрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string s = $"Описание драйвера смотрите в файле \n'ДРАЙВЕР АНАЛИЗАТОРА МОЧИ UILIT-150.docx' ";
+            DialogResult result = MessageBox.Show(s, "  О пограмме:"
+                , MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)  // закрыть App по крестику X
+        {
+            string mess = "Завершение работы драйвера анализатора.";
+            DialogResult result = MessageBox.Show("Вы действительно хотите завершить работу? \n\n   Результаты передаваться не будут!"
                 , mess, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
-                WLog("--- передумал выходить :) " + e.CloseReason.ToString()
-                    + " " + result.ToString()); // UserClosing No
-                //e.CloseReason.ToString() == "UserClosing" 
-                return;
+                WLog("--- хотел выйти, но передумал :) " + e.CloseReason.ToString()
+                    + " " + result.ToString()); 
+                e.Cancel = true;
             }
-            WLog("--- " + mess);
-            Environment.Exit(0);
-            //ExitApp(mess);
-        }
+            else
+            {
+                WLog("--- " + mess);
+            }
 
+        }
         #endregion --- методы Wlog, WErrLog;  SetPathLog, Add_RTB, ExitApp...
+
         #region --- Действия по кнопкам на форме
         private void Btn_ini_Click(object sender, EventArgs e)  // прочитать ещё раз ini-файл
         {
@@ -715,7 +858,7 @@ namespace Uri150
         private void ReRead_ini_File()
         {
             ReadParmsIni();   // читать настройки из ini-файла 
-            string[] lines = File.ReadAllLines(fnPathIni, Encoding.GetEncoding(1251));
+            string[] lines = File.ReadAllLines(pathIniFile, Encoding.GetEncoding(1251));
             string st = "";
             for (int i = 0; i < lines.Length; i++)
                 st += $"{i + 1} :  " + lines[i] + "\n";
@@ -739,6 +882,20 @@ namespace Uri150
                     ReRead_ini_File();
                     break;
                 case "001":
+                    string cHistNo = "100 000062060";    // 13 digits
+                    cHistNo = "0000000000000";
+                    cHistNo = cHistNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
+                    Add_RTB(RTBout, $"\n cHistNo: {cHistNo}.\n", Color.BlueViolet);
+                    cHistNo = cHistNo.TrimStart( '0' );  // все нули слева удалить
+                    nHistNo = cHistNo.Length == 0 ? (0) : (Convert.ToInt64(cHistNo));
+                    Add_RTB(RTBout, $"\n cHistNo: {cHistNo}, nHistNo: {nHistNo}.", Color.Red);
+                    if (nHistNo > MaxHistNo)
+                    {
+                        Add_RTB(RTBout, $"\n\n Введённый номер истории {nHistNo} больше максимально допустимого {MaxHistNo}!", Color.Red);
+                        nHistNo = 0;
+                    }
+                    break;
+                case "0A1":
                     //4 UBG  Normal 3.4umol/L
                     // 0123456789012345678901
                     string s = " UBG  Normal 3.4umol/L";
