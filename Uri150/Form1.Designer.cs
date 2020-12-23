@@ -104,7 +104,7 @@
             // Lbl_AutoVersion
             // 
             this.Lbl_AutoVersion.AutoSize = true;
-            this.Lbl_AutoVersion.Location = new System.Drawing.Point(391, 46);
+            this.Lbl_AutoVersion.Location = new System.Drawing.Point(391, 29);
             this.Lbl_AutoVersion.Name = "Lbl_AutoVersion";
             this.Lbl_AutoVersion.Size = new System.Drawing.Size(64, 13);
             this.Lbl_AutoVersion.TabIndex = 141;
@@ -292,11 +292,12 @@
             // Lbl_dtm_ver
             // 
             this.Lbl_dtm_ver.AutoSize = true;
-            this.Lbl_dtm_ver.Location = new System.Drawing.Point(391, 29);
+            this.Lbl_dtm_ver.Location = new System.Drawing.Point(391, 46);
             this.Lbl_dtm_ver.Name = "Lbl_dtm_ver";
             this.Lbl_dtm_ver.Size = new System.Drawing.Size(127, 13);
             this.Lbl_dtm_ver.TabIndex = 118;
             this.Lbl_dtm_ver.Text = "Версия от 20.10.2020 :))";
+            this.Lbl_dtm_ver.Visible = false;
             // 
             // BtnRunTest
             // 
@@ -594,7 +595,7 @@
             this.notifyIcon1.BalloonTipTitle = "Драйвер UriLit";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Драйвер UriLit-150";
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // Form1
             // 

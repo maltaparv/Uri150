@@ -48,7 +48,7 @@ namespace Uri150
         private static int MaxCntAn = 22;  // максимальное кол-во анализов одного пациента, 
                                            // передаваемых в MS-SQL за 1 раз
                                            // (это ограничение структуры AnalyserResults :((  )
-        private static int MaxHistNo = 9;  // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
+        private static Int64 MaxHistNo;      // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
                                            // берётся из .ini-файла
         private static string sModes;      // строка списка режимов работы 
                                            // режим: WriteToSQL=Yes или No
@@ -71,21 +71,19 @@ namespace Uri150
         // глобальные
         private static DateTime dt0 = DateTime.Now; // время старта / (пред)последнего приёма данных
         private static DateTime dtm = dt0;          // время последнего приёма данных
-        private string UserName = System.Environment.UserName;
-        private string ComputerName = System.Environment.MachineName;
+        private readonly string UserName = System.Environment.UserName;
+        private readonly string ComputerName = System.Environment.MachineName;
         public SerialPort _serialPort;
         private string PathIni;         // Путь к ini-файлу (пусть будет там, откуда запуск? пока так!)
         private static string AppName;  // static т.к. исп. в background-процессе
-        private static string AppVer="Версия 1.7 ";   // 2020-09-03, 2020-10-21
         private static string qkrq = ""; // ToDo запрос о работе ("кукареку") 
         private static string strV1, strV2, strV3, strV4, strV5; // на форме - напоминалки :)
         private static string dateDone = "2020-12-31 23:59";  // дата-время выполнения анализа по часам на анализаторе
         private static string dateDone999 = "31-12-2020 23:59:00.000";  // дата-время выполнения анализа для SQL ResultDate
         // начальные значения дла нового пациента
-        private static int    kAn = 0; // количество анализов у одного пациента - для UriLi-150 ВСЕГДА 11 анализов!
-        //private static string s0 = ""; // формирование строки для SQL ResultText
-        private static string s1 = "Insert into ... инициализация в InitSQLstr";
-        private static string s2 = "values (... ... инициализация в InitSQLstr";
+        private static int cntAn;        // количество анализов у одного пациента - для UriLi-150 ВСЕГДА 11 анализов!
+        private static string sql1;      // "Insert into ... инициализация в InitSQLstr";
+        private static string sql2;      // "values (... ... инициализация в InitSQLstr";
         private string inputString = ""; // полученные и собранные вместе за сеанс передачи данные для парсинга
         private static Int64 nHistNo = -1;
         private string testNo = "";      // порядковый номер теста, присваиваемый анализатором, и он его каждый раз увеличивет на 1.
@@ -119,13 +117,13 @@ namespace Uri150
             // добавляем Эвент или событие по 2му клику мышки, 
 
             //вызывая функцию  notifyIcon1_MouseDoubleClick
-            this.notifyIcon1.MouseDoubleClick += new MouseEventHandler(notifyIcon1_MouseDoubleClick);
+            this.notifyIcon1.MouseDoubleClick += new MouseEventHandler(NotifyIcon1_MouseDoubleClick);
 
             // добавляем событие на изменение окна
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ShowInTaskbar = false;
         }
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Show();
             notifyIcon1.Visible = false;
@@ -318,9 +316,10 @@ namespace Uri150
                 Line[i] = Line[i].Replace("?", " ");    // заменить непоняно откуда взявшиеся смиволы вопроса на пробел
             }
             // получаем всё для формирования строки SQL
-            int n = 0; // номер строкИ после разбиения данных на стрОки
-            string s = "---test---", cHistNo = "";
-            string[] PivTab = new string[27]; // строчки для результатов, которые пойдут в сводную таблицу
+            int n;           // номер строкИ после разбиения данных на стрОки
+            string s;        // i-я полученная строка 
+            string cHistNo;  // символьный номер истории
+            string[] PivTab = new string[34]; // строчки для результатов, которые пойдут в сводную таблицу
 
             // 0-я строка содержит 1 пробел (почему?) (признаки начала и конца 02h и 03h отбросили при разбиении по строкам :)
             // 1-я строка - порядковый номер пробы (исследования) - анализатор автоматически увеличивает его на 1 для следующей пробы
@@ -344,7 +343,7 @@ namespace Uri150
             }
             cHistNo = s.Substring(3);
             cHistNo = cHistNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
-            cHistNo = cHistNo.TrimStart('0');  // все нули слева удалить
+            cHistNo = cHistNo.TrimStart('0');    // все нули слева удалить
             nHistNo = cHistNo.Length == 0 ? (0) : (Convert.ToInt64(cHistNo));
             if (nHistNo > MaxHistNo)
             {
@@ -386,16 +385,11 @@ namespace Uri150
 
             st += $";{nHistNo};";
             sc += $";{nHistNo};";  // для EXCEL PivTab
-            //s1 = "INSERT into AnalyzerResults(Analyzer_id,ResultDate,ResultText,HostName,CntParam,HistoryNumber";
-            s1 = "INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber";
+            sql1 = "INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,HistoryNumber";
             string si = inputString.Substring(1, inputString.Length - 2);
             si = si.Replace("\r", "");
             si = si.Replace("\n", "");
-            //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{si.Replace($"\r\n", "__")}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
-            // FIXME ?передаём в SQL без разделителей строк и признаков начала и конца передачи
-            //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{inputString.Replace($"\r\n"+STX+ETX, "")}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
-            //s2 = $"VALUES({AnalyzerID},'{dateDone999}','{si}',host_name(),10,{nHistNo.ToString()}";// CntParam=10 !
-            s2 = $"VALUES({AnalyzerID},'{dateDone999}',host_name(),11,{nHistNo.ToString()}";    // ВНИМАНИЕ! CntParam=11 всегда - для тест-полосок G11. 
+            sql2 = $"VALUES({AnalyzerID},'{dateDone999}',host_name(),{nHistNo}"; // ВНИМАНИЕ! CntParam=11 всегда - для тест-полосок G11. 
 
             FindAndConcatSqlSring();
 
@@ -413,15 +407,15 @@ namespace Uri150
             // 2020-03-13 st = ";";    // очистили для следующего пациента для выгрузки в EXCEL
 
             // закрыть скобки
-            s1 += ",ResultText)"; // далее идёт VALUES(...  
-            s2 += $", 'Номер на анализаторе: {testNo}, дата-время: {dateDone}.'); ";
+            sql1 += ",ResultText,CntParam)"; // далее идёт VALUES(...  
+            sql2 += $", 'Номер на анализаторе: {testNo}, дата-время: {dateDone}.',{cntAn}); ";
             if (sDebugModes.IndexOf("лог SQL") >= 0)
-                WTest($"Log_SQL", s1 + s2);
+                WTest($"Log_SQL", sql1 + sql2);
 
-            if (sModes.IndexOf("WriteToSQL=Yes") >= 0 & kAn>0 ) // строка SQL сформирована успешно
+            if (sModes.IndexOf("WriteToSQL=Yes") >= 0 & cntAn>0 ) // строка SQL сформирована успешно (cntAn вместо kAn)
             {
-                WLog("SQL " + s1 + s2);
-                ToSQL(s1 + s2);
+                WLog("SQL " + sql1 + sql2);
+                ToSQL(sql1 + sql2);
                 msg = $"SQL: Номер истории {nHistNo}, дата {dateDone999}. Номер пробы: {testNo}.";
                 Add_RTB(RTBout, $"\n{msg}\n", Color.DarkGreen);
             }
@@ -433,8 +427,9 @@ namespace Uri150
                 // найти нужные анадизы и сформировать SQL-строку
                 //throw new NotImplementedException();
                 //rc = 1; // RetCode = 1 по умолчанию
-                int k = 0; // номер параметра (результата) для формирования строки SQL - ParamName1 (n=1), ParamValue1, ParamMsr1 ...
-                string sx = "+++"; // одна (текущая) строчка Line[i] из квиточка
+                //int cntAn = 0;
+                cntAn = 0; // номер параметра (результата) для формирования строки SQL - ParamName1 (n=1), ParamValue1, ParamMsr1 ...
+                string sx; // одна (текущая) строчка Line[i] из квиточка
                 string val, nam, mgr, attention;
                 for (int i = 8; i < Line.Length; i++)  // не с первой: строки с результатами начинаются с ~8..11-й. FIXME !
                 {
@@ -447,12 +442,11 @@ namespace Uri150
                         continue; // пропускаем пустую строку
                     }
 
-                    nam = "";
+                    nam = sx.Substring(2, 3); // название анализа - 3 символа
                     val = "";
                     mgr = "";
                     attention = sx.Substring(1, 1);  // признак: " " -норма, "*" - результат выходит за референсные значения 
-
-                    nam = sx.Substring(2, 3);
+                    
                     if (nam == "LEU" | nam == "KET" | nam == "BIL" | nam == "GLU" | nam == "BLD" | nam == "Vc ")
                     {
                         val = sx.Substring(5, 11);
@@ -477,66 +471,32 @@ namespace Uri150
                     // логирование белка
                     if (((nam == "PRO") & sModes.IndexOf("лог белка") >= 0) & (sx.Substring(1, 1) == "*"))
                         WTest("Log_PROTEIN", $"Номер истории {nHistNo}, No: {testNo}, дата: {dateDone}, {s}");
-                    #region --- old calls
-                    ////  0123456789 123456789 123 // 12-я строка: ЛЕЙКОЦИТЫ   
-                    ////12 *LEU +2    125 CELL/uLg              
-                    //ConcatSqlSring(12, "LEU", s.Substring(2, 3), s.Substring(5, 11), s.Substring(16)); if (rc < 1) return;
-                    ////14  KET -        0 mmol/L
-                    //ConcatSqlSring(14, "KET", s.Substring(2, 3), s.Substring(5, 11), s.Substring(16)); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 15 строка - НИТРАТЫ 
-                    ////15  NIT -                    
-                    //ConcatSqlSring(15, "NIT", s.Substring(2, 3), s.Substring(5), ""); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 16 строка - Уробилиноген
-                    ////16  URO Normal
-                    //ConcatSqlSring(16, "URO", s.Substring(2, 3), s.Substring(5), ""); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 17 строка - БИЛИРУБИН
-                    ////17 *BIL +3     100 umol/L
-                    //ConcatSqlSring(17, "BIL", s.Substring(2, 3), s.Substring(5, 12), s.Substring(17)); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 18 строка - ПРОТЕИН - БЕЛОК
-                    ////18 *PRO +3      >=3.0 g/L
-                    //ConcatSqlSring(18, "PRO", s.Substring(2, 3), s.Substring(5, 15), s.Substring(20)); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 19 строка --ххххх--
-                    ////19  GLU -        0 mmol/L
-                    //ConcatSqlSring(19, "GLU", s.Substring(2, 3), s.Substring(5, 12), s.Substring(17)); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 20 строка - УДЕЛЬНЫЙ ВЕС (ПЛОТНОСТЬ)
-                    ////20  SG         1.005     
-                    //ConcatSqlSring(20, "SG", s.Substring(2, 2), s.Substring(4), ""); if (rc < 1) return;
-                    ////  0123456789 123456789 123 // 21 строка - BLOOD - КРОВЬ
-                    ////21 *BLD +3    200 CELL/uL
-                    //ConcatSqlSring(21, "BLD", s.Substring(2, 3), s.Substring(5, 11), s.Substring(16)); if (rc < 1) return;
-                    ////23  pH         7.5     
-                    //ConcatSqlSring(23, "pH", s.Substring(2, 2), s.Substring(4), ""); if (rc < 1) return;
-                    ////24  Vc  -        0 mmol/L
-                    //ConcatSqlSring(24, "Vc", s.Substring(2, 2), s.Substring(4, 12), s.Substring(17)); if (rc < 1) return;
-                    #endregion --- old calls
 
                     nam = nam.Trim();
                     val = val.Trim().Replace("    ", " "); //т.к. val для URO не влезает в 16 символов (ограничение длины поля в SQL) 
                     mgr = mgr.Trim();
-                    k++;   // k-тый параметр Param<k>
-                    //s1 += $",ParamName{k},ParamValue{k},ParamMsr{k}";
-                    //s2 += $",'{nam}','{val}','{mgr}'";
-                    s1 += $",ParamName{k},ParamValue{k},ParamMsr{k},Attention{k}";  // 2020-10-20
-                    s2 += $",'{nam}','{val}','{mgr}','{attention}'";
+                    cntAn++;   // k-тый параметр Param<k>
+                    sql1 += $",ParamName{cntAn},ParamValue{cntAn},ParamMsr{cntAn},Attention{cntAn}";  // 2020-10-20
+                    sql2 += $",'{nam}','{val}','{mgr}','{attention}'";
 
                     //st += $";{nam}";  //2020-08-20
                     //sc += $";{nam}";  // для EXCEL PivTab
                     //st += $"{nam};{val};{mgr};";  // 2020-10-20
                     st += $"{nam};{val};{mgr};{attention};";
-                    WLog($"Строка {i} (длина {sx.Length}): {sx}. Выделен {k}-й: nam='{nam}', val='{val}', mgr='{mgr}', attention='{attention}'.");
-                    PivTab[k] = sc + $"{nam};{val};{mgr};";
+                    WLog($"Строка {i} (длина {sx.Length}): {sx}. Выделен {cntAn}-й: nam='{nam}', val='{val}', mgr='{mgr}', attention='{attention}'.");
+                    PivTab[cntAn] = sc + $"{nam};{val};{mgr};";
                 }
 
-                if (k == 0)   // нет результата, ничего не нашли
+                if (cntAn == 0) // нет результата, ничего не нашли
                 {
-                    kAn = 0;    // кол-во выделенных анализов - используется как признак, писАть ли в SQL.
-                    s1 = ""; s2 = "";   // SQL строку не формируем 
+                    //kAn = 0;    // cntAn кол-во выделенных анализов - используется как признак, писАть ли в SQL.
+                    sql1 = ""; sql2 = "";   // SQL строку не формируем 
                     msg = "Не нашли ни одного результата!";
                     Add_RTB(RTBout, "\n"+msg, Color.Red);
                     WLog(msg);
                     return;
                 }
-                kAn = k;
+                //kAn = cntAn;
             }
         }
         // ---
@@ -553,20 +513,19 @@ namespace Uri150
                 MessageBox.Show(errmsg, " Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 Environment.Exit(1);
             }
-            //string dtVers = new System.IO.FileInfo(PathIni).CreationTime.ToString();
-            string dtVers = new System.IO.FileInfo(AppName+".exe").LastWriteTime.ToString();
-            AppVer += $" от {dtVers}.";  // 2020-09-01
-            Lbl_dtm_ver.Text = AppVer;
-            ///*
+            //string dtVers = new System.IO.FileInfo(AppName + ".exe").LastWriteTime.ToString();
+            //AppVer = $"Версия 1.7 от {dtVers}.";  // 2020-09-01
+            //Lbl_dtm_ver.Text = AppVer;
+
             //var version = Assembly.GetExecutingAssembly().GetName().Version;
             //var builtDate = new DateTime(2019, 1, 1).AddDays(version.Build).AddSeconds(version.Revision * 2);
             //var versionString = String.Format("версия {0} изм. {1}", version.ToString(2), builtDate.ToShortDateString());
-            // из AutoVersion 2:
+            // Версию брать из AutoVersion 2:
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            var assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).FileVersion;
-            var versionString = version + ", " + fileVersion;
-            Lbl_AutoVersion.Text = versionString;
+            string assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).FileVersion;
+            string AppVer = "Версия " + version + " от " + fileVersion;
+            Lbl_AutoVersion.Text = AppVer;
             //*/
             lbl_dtm.Text = "Время старта: " + dt0.ToString();  //+ToDo: вывод на форму - время старта и путь ini-файла 
             lbl_ini.Text = "ini-файл: " + pathIniFile;
@@ -582,7 +541,7 @@ namespace Uri150
             ComPortNo = lines[2];   // 3-я строка 
             connStr = lines[3];     // 4-я строка
             string nameSQLsrev = connStr.Substring(0, connStr.IndexOf(';'));
-            Lbl_SQL.Text = nameSQLsrev;     // Data Source=asu-911; или bsmp-server0
+            Lbl_SQL.Text = nameSQLsrev;     // Data Source=asu-911; или bsmp-server1
             MaxCntAn = Convert.ToInt32(lines[4].Trim());    // 5-я строка
             sModes = lines[5].Trim();                       // 6-я строка: Режимы работы 
             Lbl_sModes.Text = sModes;
@@ -591,7 +550,7 @@ namespace Uri150
             // (sModes.IndexOf("Дата в SQL") >= 0);  // (GetDate)         
             sDebugModes = lines[6].Trim();           // 7-я строкa: Режимы отладки 
             Lbl_DebugModes.Text = sDebugModes;
-            MaxHistNo = Convert.ToInt32(lines[7].Trim());          // 8-я строка:  макс. номер истории
+            MaxHistNo = Convert.ToInt64(lines[7].Trim());          // 8-я строка:  макс. номер истории
             PathLogParm = lines[8].Trim();  // 9-я строка 
             Lbl_log.Text = "путь к логам: " + PathLogParm;
             SetPathLog();
@@ -604,7 +563,7 @@ namespace Uri150
             strV2 = lines[14]; // 15-я строка
             strV3 = lines[15]; // 16-я строка
             strV4 = lines[16]; // 17-я строка
-            strV5 = lines[17]; // 18-я  cтрока
+            strV5 = lines[17]; // 18-я cтрока
             Lbl_v1.Text = "";
             Lbl_v2.Text = "";
             Lbl_v3.Text = "";
@@ -620,7 +579,7 @@ namespace Uri150
             }
 
             Lbl_Comp_User.Text = $"Computer: {ComputerName}, User: {UserName}";
-            WLog($"--- Запуск {AppName} {ComputerName} {UserName} {dtVers}");
+            WLog($"--- Запуск {AppName} {ComputerName} {UserName} {AppVer}");
             //WLog($"--- ini-файл: {fnPathIni}");
             //string parmIni = "";
             //for (int i = 0; i < 19; i++) parmIni += "\n" + lines[i];
@@ -927,18 +886,6 @@ namespace Uri150
                 case "002":
                     //4 UBG  Normal 3.4umol/L
                     // 0123456789012345678901
-                    int i1 = 9, i2 = 12, i3 = 321, i4 = 4321;
-                    //string st99 = String.Format("{0:d3}",testNo);
-                    string s1 = "", s2 = "", s3 = "", s4 = "", s0 = "";
-                    //s1 = i1.ToString("##-##");
-                    s1 = i1.ToString("D4");
-                    s2 = i2.ToString("D4");
-                    s3 = i3.ToString("D4");
-                    s4 = i4.ToString("D4");
-                    s0 = ":" + s1.Substring(0, 2) + "." + s1.Substring(2, 2) + "0";
-                    s0 = ":" + s2.Substring(0, 2) + "." + s2.Substring(2, 2) + "0";
-                    s0 = ":" + s3.Substring(0, 2) + "." + s3.Substring(2, 2) + "0";
-                    s0 = ":" + s4.Substring(0, 2) + "." + s4.Substring(2, 2) + "0";
                     break;
                 case "003":
                     kTest++; dtm = DateTime.Now;
@@ -951,12 +898,6 @@ namespace Uri150
                     string st1 = dt0.ToString("yyyy-MM-dd");
                     string st2 = dt0.ToString("HH:mm:ss") + ".000";
                     break;
-                /*string st = "R,05-08-2019,1908051005,ЕЛИСЕЕВА Е А,44463,ОЖОГ,,Admin,,Общий белок,Колич.,46.4,г/л";
-                string[] pt;
-                //char[] sep = { ",", "," };
-                pt = st.Split(new char[] { ',' }, 13);
-                break;
-                */
                 case "RTBout 1":
                     kTest++; dtm = DateTime.Now;
                     Add_RTB(RTBout, $"1 номер {testNo}" + dtm.ToString("yyyy-MM-dd HH:mm:ss") + $"\n");
