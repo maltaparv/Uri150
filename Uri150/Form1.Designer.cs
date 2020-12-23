@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_AutoVersion = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Btn_ini = new System.Windows.Forms.Button();
             this.Lbl_DebugModes = new System.Windows.Forms.Label();
             this.Lbl_AnalyserID = new System.Windows.Forms.Label();
             this.lblMes1 = new System.Windows.Forms.Label();
@@ -86,8 +85,8 @@
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Cat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -111,26 +110,6 @@
             this.Lbl_AutoVersion.TabIndex = 141;
             this.Lbl_AutoVersion.Text = "AutoVersion";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(655, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 87);
-            this.pictureBox3.TabIndex = 140;
-            this.pictureBox3.TabStop = false;
-            // 
-            // Btn_ini
-            // 
-            this.Btn_ini.Location = new System.Drawing.Point(6, 164);
-            this.Btn_ini.Name = "Btn_ini";
-            this.Btn_ini.Size = new System.Drawing.Size(40, 29);
-            this.Btn_ini.TabIndex = 139;
-            this.Btn_ini.Text = "ini";
-            this.Btn_ini.UseVisualStyleBackColor = true;
-            this.Btn_ini.Click += new System.EventHandler(this.Btn_ini_Click);
-            // 
             // Lbl_DebugModes
             // 
             this.Lbl_DebugModes.AutoSize = true;
@@ -152,9 +131,10 @@
             // lblMes1
             // 
             this.lblMes1.AutoSize = true;
-            this.lblMes1.Location = new System.Drawing.Point(61, 164);
+            this.lblMes1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMes1.Location = new System.Drawing.Point(12, 166);
             this.lblMes1.Name = "lblMes1";
-            this.lblMes1.Size = new System.Drawing.Size(63, 13);
+            this.lblMes1.Size = new System.Drawing.Size(74, 13);
             this.lblMes1.TabIndex = 136;
             this.lblMes1.Text = "Com-порт...";
             // 
@@ -176,7 +156,7 @@
             this.RTBout.Location = new System.Drawing.Point(5, 221);
             this.RTBout.Name = "RTBout";
             this.RTBout.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.RTBout.Size = new System.Drawing.Size(687, 313);
+            this.RTBout.Size = new System.Drawing.Size(736, 313);
             this.RTBout.TabIndex = 134;
             this.RTBout.Text = "Контрольный вывод:\n<...>\n";
             // 
@@ -194,7 +174,7 @@
             this.Pic_Cat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Cat.BackColor = System.Drawing.SystemColors.Control;
             this.Pic_Cat.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Cat.Image")));
-            this.Pic_Cat.Location = new System.Drawing.Point(300, -339);
+            this.Pic_Cat.Location = new System.Drawing.Point(349, -339);
             this.Pic_Cat.Name = "Pic_Cat";
             this.Pic_Cat.Size = new System.Drawing.Size(92, 55);
             this.Pic_Cat.TabIndex = 132;
@@ -321,7 +301,7 @@
             // BtnRunTest
             // 
             this.BtnRunTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnRunTest.Location = new System.Drawing.Point(615, 192);
+            this.BtnRunTest.Location = new System.Drawing.Point(664, 192);
             this.BtnRunTest.Name = "BtnRunTest";
             this.BtnRunTest.Size = new System.Drawing.Size(77, 28);
             this.BtnRunTest.TabIndex = 117;
@@ -333,7 +313,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(383, 197);
+            this.label1.Location = new System.Drawing.Point(432, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 116;
@@ -354,7 +334,7 @@
             "01. Тест 01.",
             "02. Тест 02.",
             "03. test03"});
-            this.CmbTest.Location = new System.Drawing.Point(424, 194);
+            this.CmbTest.Location = new System.Drawing.Point(473, 194);
             this.CmbTest.Name = "CmbTest";
             this.CmbTest.Size = new System.Drawing.Size(189, 21);
             this.CmbTest.TabIndex = 115;
@@ -364,7 +344,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(135, 125);
             this.pictureBox1.TabIndex = 114;
             this.pictureBox1.TabStop = false;
             // 
@@ -372,7 +352,7 @@
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 537);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(698, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(747, 22);
             this.statusStrip1.TabIndex = 143;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -385,7 +365,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(698, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(747, 24);
             this.menuStrip1.TabIndex = 144;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -608,17 +588,23 @@
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
             this.опрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОпрограммеToolStripMenuItem_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Свёрнут в трей.";
+            this.notifyIcon1.BalloonTipTitle = "Драйвер UriLit";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Драйвер UriLit-150";
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 559);
-            this.Controls.Add(this.pictureBox3);
+            this.ClientSize = new System.Drawing.Size(747, 559);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Lbl_AutoVersion);
-            this.Controls.Add(this.Btn_ini);
             this.Controls.Add(this.Lbl_DebugModes);
             this.Controls.Add(this.Lbl_AnalyserID);
             this.Controls.Add(this.lblMes1);
@@ -650,7 +636,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Cat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -664,8 +649,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Lbl_AutoVersion;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button Btn_ini;
         private System.Windows.Forms.Label Lbl_DebugModes;
         private System.Windows.Forms.Label Lbl_AnalyserID;
         private System.Windows.Forms.Label lblMes1;
@@ -719,6 +702,7 @@
         private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem опрограммеToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

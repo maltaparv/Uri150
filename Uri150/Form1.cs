@@ -113,6 +113,34 @@ namespace Uri150
             foreach (string st in list_adr) IP += st + " ";
             Lbl_IP.Text = "IP: " + IP;
             CmbTest.SelectedIndex = 0;  // первый (нулевой) элемент - текущий, видимый.
+
+            notifyIcon1.Visible = false; // невидимая иконка в трее
+
+            // добавляем Эвент или событие по 2му клику мышки, 
+
+            //вызывая функцию  notifyIcon1_MouseDoubleClick
+            this.notifyIcon1.MouseDoubleClick += new MouseEventHandler(notifyIcon1_MouseDoubleClick);
+
+            // добавляем событие на изменение окна
+            this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.ShowInTaskbar = false;
+        }
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.Visible = true; // иконка в трее видимая
+                notifyIcon1.ShowBalloonTip(1000); // 1 секунду показать предупреждение о сворачивании в трей
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            { notifyIcon1.Visible = false; }
         }
         #region --- методы для Com-порта: инициализация (PortIni) и чтения (Sp_DataReceived)
         private delegate void SetTextDeleg(string text);  // Делегат используется для записи в UI control из потока не-UI
@@ -318,11 +346,13 @@ namespace Uri150
             cHistNo = cHistNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
             cHistNo = cHistNo.TrimStart('0');  // все нули слева удалить
             nHistNo = cHistNo.Length == 0 ? (0) : (Convert.ToInt64(cHistNo));
-            Add_RTB(RTBout, $"\n cHistNo: {cHistNo}, nHistNo: {nHistNo}.", Color.Red);
             if (nHistNo > MaxHistNo)
             {
-                Add_RTB(RTBout, $"\n\n Введённый номер истории {nHistNo} больше максимально допустимого {MaxHistNo}!", Color.Red);
+                string err1 = $"Введённый номер истории {nHistNo} больше максимально допустимого {MaxHistNo}!";
+                Add_RTB(RTBout, $"\n\n{err1}", Color.Red);
                 nHistNo = 0;
+                WLog(err1);
+                //MessageBox.Show(err1, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Stop); // нельзя останавливать процесс работы!
             }
 
             if (nHistNo == 0)
@@ -848,13 +878,6 @@ namespace Uri150
             }
 
         }
-        #endregion --- методы Wlog, WErrLog;  SetPathLog, Add_RTB, ExitApp...
-
-        #region --- Действия по кнопкам на форме
-        private void Btn_ini_Click(object sender, EventArgs e)  // прочитать ещё раз ini-файл
-        {
-            ReRead_ini_File();
-        }
         private void ReRead_ini_File()
         {
             ReadParmsIni();   // читать настройки из ini-файла 
@@ -864,12 +887,7 @@ namespace Uri150
                 st += $"{i + 1} :  " + lines[i] + "\n";
             MessageBox.Show(st, " Параметры в .ini-файле:");
         }
-
-        private void BtnClear_Click(object sender, EventArgs e)
-        {
-            RTBout.Clear();
-        }
-        #endregion --- Действия по кнопкам на форме
+        #endregion --- методы Wlog, WErrLog;  SetPathLog, Add_RTB, ExitApp...
         #region --- Тесты по кнопке Выполнить
         private void BtnRunTest_Click(object sender, EventArgs e)
         {
@@ -883,7 +901,7 @@ namespace Uri150
                     break;
                 case "001":
                     string cHistNo = "100 000062060";    // 13 digits
-                    cHistNo = "0000000000000";
+                    //cHistNo = "0000000000000";
                     cHistNo = cHistNo.Replace(" ", "0"); // заменить пробелы на нули (FIXME костыль №2 26.08.2020 :) 
                     Add_RTB(RTBout, $"\n cHistNo: {cHistNo}.\n", Color.BlueViolet);
                     cHistNo = cHistNo.TrimStart( '0' );  // все нули слева удалить

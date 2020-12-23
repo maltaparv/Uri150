@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\parameters.ico" />
+    <Content Include="Resources\Uri128x128.ico" />
     <Content Include="Resources\Uri150_s.ico" />
     <Content Include="speech-balloon-orange-u256_icon-icons.com_62592.ico" />
     <Content Include="Uri150_s.ico" />
