@@ -1,0 +1,698 @@
+2020.12.24 00:39:58 Количество строк: 21.
+2020.12.24 00:39:58 Строка 8: пустая.
+2020.12.24 00:39:58 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 00:39:58 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 00:39:58 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 00:39:58 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 00:39:58 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 00:39:58 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 00:39:58 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 00:39:58 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 00:39:58 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 00:39:58 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 00:39:58 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1  1.4', mgr='mmol/L', attention='*'.
+2020.12.24 00:39:58 Строка 20: пустая.
+2020.12.24 00:39:58 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 00:40:56',host_name(),11,61310,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','+1  1.4','mmol/L','*', 'Номер на анализаторе: 000001, дата-время: 2020-12-24  00:40:56.'); 
+2020.12.24 00:50:00 Количество строк: 21.
+2020.12.24 00:50:00 Строка 8: пустая.
+2020.12.24 00:50:00 Строка 9 (длина 23):  *LEU +2    125 CELL/uL. Выделен 1-й: nam='LEU', val='+2 125', mgr='CELL/uL', attention='*'.
+2020.12.24 00:50:00 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-  0.5', mgr='mmol/L', attention='*'.
+2020.12.24 00:50:00 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 00:50:00 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 00:50:00 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 00:50:00 Строка 14 (длина 23):  *PRO +3      >=3.0 g/L. Выделен 6-й: nam='PRO', val='+3   >=3.0', mgr='g/L', attention='*'.
+2020.12.24 00:50:00 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 00:50:00 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 00:50:00 Строка 17 (длина 23):  *BLD +2     80 CELL/uL. Выделен 9-й: nam='BLD', val='+2  80', mgr='CELL/uL', attention='*'.
+2020.12.24 00:50:00 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 00:50:00 Строка 19 (длина 23):  *Vc  +-     0.6 mmol/L. Выделен 11-й: nam='Vc', val='+-  0.6', mgr='mmol/L', attention='*'.
+2020.12.24 00:50:00 Строка 20: пустая.
+2020.12.24 00:50:00 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 00:50:58',host_name(),11,61306,'LEU','+2 125','CELL/uL','*','KET','+-  0.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+3   >=3.0','g/L','*','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','+2  80','CELL/uL','*','pH','6.0','',' ','Vc','+-  0.6','mmol/L','*', 'Номер на анализаторе: 000002, дата-время: 2020-12-24  00:50:58.'); 
+2020.12.24 00:51:53 Количество строк: 21.
+2020.12.24 00:51:53 Строка 8: пустая.
+2020.12.24 00:51:53 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 00:51:53 Строка 10 (длина 23):  *KET +2     4.0 mmol/L. Выделен 2-й: nam='KET', val='+2  4.0', mgr='mmol/L', attention='*'.
+2020.12.24 00:51:53 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 00:51:53 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 00:51:53 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 00:51:53 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 00:51:53 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 00:51:53 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 00:51:53 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 00:51:53 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 00:51:53 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 00:51:53 Строка 20: пустая.
+2020.12.24 00:51:53 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 00:52:51',host_name(),11,61275,'LEU','-    0','CELL/uL',' ','KET','+2  4.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000003, дата-время: 2020-12-24  00:52:51.'); 
+2020.12.24 01:49:13 Количество строк: 21.
+2020.12.24 01:49:13 Строка 8: пустая.
+2020.12.24 01:49:13 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 01:49:13 Строка 10 (длина 23):  *KET +2     4.0 mmol/L. Выделен 2-й: nam='KET', val='+2  4.0', mgr='mmol/L', attention='*'.
+2020.12.24 01:49:13 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 01:49:13 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 01:49:13 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 01:49:13 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 01:49:13 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 01:49:13 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 01:49:13 Строка 17 (длина 23):  *BLD +2     80 CELL/uL. Выделен 9-й: nam='BLD', val='+2  80', mgr='CELL/uL', attention='*'.
+2020.12.24 01:49:13 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 01:49:13 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 01:49:13 Строка 20: пустая.
+2020.12.24 01:49:13 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 01:50:11',host_name(),11,61318,'LEU','+1  70','CELL/uL','*','KET','+2  4.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','+2  80','CELL/uL','*','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000004, дата-время: 2020-12-24  01:50:11.'); 
+2020.12.24 03:19:19 Количество строк: 21.
+2020.12.24 03:19:19 Строка 8: пустая.
+2020.12.24 03:19:19 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 03:19:19 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-  0.5', mgr='mmol/L', attention='*'.
+2020.12.24 03:19:19 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 03:19:19 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 03:19:19 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 03:19:19 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 03:19:19 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 03:19:19 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 03:19:19 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 03:19:19 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 03:19:19 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 03:19:19 Строка 20: пустая.
+2020.12.24 03:19:19 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 03:20:17',host_name(),11,61317,'LEU','-    0','CELL/uL',' ','KET','+-  0.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000005, дата-время: 2020-12-24  03:20:17.'); 
+2020.12.24 03:50:16 Количество строк: 21.
+2020.12.24 03:50:16 Строка 8: пустая.
+2020.12.24 03:50:16 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 03:50:16 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 03:50:16 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 03:50:16 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 03:50:16 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 03:50:16 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 03:50:16 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 03:50:16 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 03:50:16 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 03:50:16 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 03:50:16 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 03:50:16 Строка 20: пустая.
+2020.12.24 03:50:16 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 03:51:14',host_name(),11,61323,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000006, дата-время: 2020-12-24  03:51:14.'); 
+2020.12.24 05:52:48 Количество строк: 21.
+2020.12.24 05:52:48 Строка 8: пустая.
+2020.12.24 05:52:48 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 05:52:48 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-  0.5', mgr='mmol/L', attention='*'.
+2020.12.24 05:52:48 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 05:52:48 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 05:52:48 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 05:52:48 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 05:52:48 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 05:52:48 Строка 16 (длина 23):   SG         1.020     . Выделен 8-й: nam='SG', val='1.020', mgr='', attention=' '.
+2020.12.24 05:52:48 Строка 17 (длина 23):  *BLD +1     25 CELL/uL. Выделен 9-й: nam='BLD', val='+1  25', mgr='CELL/uL', attention='*'.
+2020.12.24 05:52:48 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 05:52:48 Строка 19 (длина 23):  *Vc  +-     0.6 mmol/L. Выделен 11-й: nam='Vc', val='+-  0.6', mgr='mmol/L', attention='*'.
+2020.12.24 05:52:48 Строка 20: пустая.
+2020.12.24 05:52:48 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 05:53:46',host_name(),11,61324,'LEU','+-  15','CELL/uL','*','KET','+-  0.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.020','',' ','BLD','+1  25','CELL/uL','*','pH','6.5','',' ','Vc','+-  0.6','mmol/L','*', 'Номер на анализаторе: 000007, дата-время: 2020-12-24  05:53:46.'); 
+2020.12.24 05:55:42 Количество строк: 21.
+2020.12.24 05:55:42 Строка 8: пустая.
+2020.12.24 05:55:42 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 05:55:42 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 05:55:42 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 05:55:42 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 05:55:42 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 05:55:42 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 05:55:42 Строка 15 (длина 23):  *GLU +4    >=55 mmol/L. Выделен 7-й: nam='GLU', val='+4 >=55', mgr='mmol/L', attention='*'.
+2020.12.24 05:55:42 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 05:55:42 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 05:55:42 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 05:55:42 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 05:55:42 Строка 20: пустая.
+2020.12.24 05:55:42 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 05:56:40',host_name(),11,61325,'LEU','+1  70','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+-    0.15','g/L','*','GLU','+4 >=55','mmol/L','*','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000008, дата-время: 2020-12-24  05:56:40.'); 
+2020.12.24 07:17:46 Количество строк: 21.
+2020.12.24 07:17:46 Строка 8: пустая.
+2020.12.24 07:17:46 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 07:17:47 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:17:47 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 07:17:47 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 07:17:47 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 07:17:47 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 07:17:47 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:17:47 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 07:17:47 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 07:17:47 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 07:17:47 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:17:47 Строка 20: пустая.
+2020.12.24 07:17:47 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 07:18:44',host_name(),11,61163,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','+3 200','CELL/uL','*','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000009, дата-время: 2020-12-24  07:18:44.'); 
+2020.12.24 07:39:17 Количество строк: 21.
+2020.12.24 07:39:17 Строка 8: пустая.
+2020.12.24 07:39:17 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 07:39:17 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:39:17 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 07:39:17 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 07:39:17 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 07:39:17 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 07:39:17 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:39:17 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 07:39:17 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 07:39:17 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 07:39:17 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:39:17 Строка 20: пустая.
+2020.12.24 07:39:17 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 07:40:15',host_name(),11,61317,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000010, дата-время: 2020-12-24  07:40:15.'); 
+2020.12.24 07:42:29 Количество строк: 21.
+2020.12.24 07:42:29 Строка 8: пустая.
+2020.12.24 07:42:29 Строка 9 (длина 23):  *LEU +3    500 CELL/uL. Выделен 1-й: nam='LEU', val='+3 500', mgr='CELL/uL', attention='*'.
+2020.12.24 07:42:29 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:42:29 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 07:42:29 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 07:42:29 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 07:42:29 Строка 14 (длина 23):  *PRO +2        1.0 g/L. Выделен 6-й: nam='PRO', val='+2  1.0', mgr='g/L', attention='*'.
+2020.12.24 07:42:29 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:42:29 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 07:42:29 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 07:42:29 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 07:42:29 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:42:29 Строка 20: пустая.
+2020.12.24 07:42:29 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 07:43:27',host_name(),11,61327,'LEU','+3 500','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+2  1.0','g/L','*','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','+3 200','CELL/uL','*','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000011, дата-время: 2020-12-24  07:43:27.'); 
+2020.12.24 07:48:01 Количество строк: 21.
+2020.12.24 07:48:01 Строка 8: пустая.
+2020.12.24 07:48:01 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 07:48:01 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:48:01 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 07:48:01 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 07:48:01 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 07:48:01 Строка 14 (длина 23):  *PRO +3      >=3.0 g/L. Выделен 6-й: nam='PRO', val='+3   >=3.0', mgr='g/L', attention='*'.
+2020.12.24 07:48:01 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:48:01 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 07:48:01 Строка 17 (длина 23):  *BLD +2     80 CELL/uL. Выделен 9-й: nam='BLD', val='+2  80', mgr='CELL/uL', attention='*'.
+2020.12.24 07:48:01 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 07:48:01 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:48:01 Строка 20: пустая.
+2020.12.24 07:48:01 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 07:48:59',host_name(),11,61328,'LEU','+1  70','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+3   >=3.0','g/L','*','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','+2  80','CELL/uL','*','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000012, дата-время: 2020-12-24  07:48:59.'); 
+2020.12.24 07:59:16 Количество строк: 21.
+2020.12.24 07:59:16 Строка 8: пустая.
+2020.12.24 07:59:16 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 07:59:16 Строка 10 (длина 23):  *KET +2     4.0 mmol/L. Выделен 2-й: nam='KET', val='+2  4.0', mgr='mmol/L', attention='*'.
+2020.12.24 07:59:16 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 07:59:16 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 07:59:16 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
+2020.12.24 07:59:16 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 07:59:16 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:59:16 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 07:59:16 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 07:59:16 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 07:59:16 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 07:59:16 Строка 20: пустая.
+2020.12.24 07:59:16 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 08:00:14',host_name(),11,61328,'LEU','+1  70','CELL/uL','*','KET','+2  4.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','6.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000013, дата-время: 2020-12-24  08:00:14.'); 
+2020.12.24 08:27:04 Количество строк: 21.
+2020.12.24 08:27:04 Строка 8: пустая.
+2020.12.24 08:27:04 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 08:27:04 Строка 10 (длина 23):  *KET +2     4.0 mmol/L. Выделен 2-й: nam='KET', val='+2  4.0', mgr='mmol/L', attention='*'.
+2020.12.24 08:27:04 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 08:27:04 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 08:27:04 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 08:27:04 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 08:27:04 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:27:04 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 08:27:04 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 08:27:04 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 08:27:04 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:27:04 Строка 20: пустая.
+2020.12.24 08:27:04 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 08:28:02',host_name(),11,61330,'LEU','+1  70','CELL/uL','*','KET','+2  4.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000014, дата-время: 2020-12-24  08:28:02.'); 
+2020.12.24 08:57:50 Количество строк: 21.
+2020.12.24 08:57:50 Строка 8: пустая.
+2020.12.24 08:57:50 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 08:57:50 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:57:50 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 08:57:50 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 08:57:50 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 08:57:50 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 08:57:50 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:57:50 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 08:57:50 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 08:57:50 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 08:57:50 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:57:50 Строка 20: пустая.
+2020.12.24 08:57:50 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 08:58:48',host_name(),11,61331,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000015, дата-время: 2020-12-24  08:58:48.'); 
+2020.12.24 08:59:55 Количество строк: 21.
+2020.12.24 08:59:55 Строка 8: пустая.
+2020.12.24 08:59:55 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 08:59:55 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-  0.5', mgr='mmol/L', attention='*'.
+2020.12.24 08:59:55 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 08:59:55 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 08:59:55 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 08:59:55 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 08:59:55 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:59:55 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 08:59:55 Строка 17 (длина 23):  *BLD +1     25 CELL/uL. Выделен 9-й: nam='BLD', val='+1  25', mgr='CELL/uL', attention='*'.
+2020.12.24 08:59:55 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 08:59:55 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 08:59:55 Строка 20: пустая.
+2020.12.24 08:59:55 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 09:00:53',host_name(),11,61332,'LEU','+-  15','CELL/uL','*','KET','+-  0.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','+1  25','CELL/uL','*','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000016, дата-время: 2020-12-24  09:00:53.'); 
+2020.12.24 09:01:30 Количество строк: 21.
+2020.12.24 09:01:30 Строка 8: пустая.
+2020.12.24 09:01:30 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 09:01:30 Строка 10 (длина 23):  *KET +2     4.0 mmol/L. Выделен 2-й: nam='KET', val='+2  4.0', mgr='mmol/L', attention='*'.
+2020.12.24 09:01:30 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 09:01:30 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 09:01:30 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 09:01:30 Строка 14 (длина 23):  *PRO +2        1.0 g/L. Выделен 6-й: nam='PRO', val='+2  1.0', mgr='g/L', attention='*'.
+2020.12.24 09:01:30 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:01:30 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 09:01:30 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 09:01:30 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 09:01:30 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:01:30 Строка 20: пустая.
+2020.12.24 09:01:30 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 09:02:27',host_name(),11,61333,'LEU','+1  70','CELL/uL','*','KET','+2  4.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+2  1.0','g/L','*','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000017, дата-время: 2020-12-24  09:02:27.'); 
+2020.12.24 09:03:55 Количество строк: 21.
+2020.12.24 09:03:55 Строка 8: пустая.
+2020.12.24 09:03:55 Строка 9 (длина 23):  *LEU +1     70 CELL/uL. Выделен 1-й: nam='LEU', val='+1  70', mgr='CELL/uL', attention='*'.
+2020.12.24 09:03:55 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:03:55 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 09:03:55 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 09:03:55 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 09:03:55 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 09:03:55 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:03:55 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 09:03:55 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 09:03:55 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 09:03:55 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:03:55 Строка 20: пустая.
+2020.12.24 09:03:55 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 09:04:53',host_name(),11,61335,'LEU','+1  70','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','+3 200','CELL/uL','*','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000018, дата-время: 2020-12-24  09:04:53.'); 
+2020.12.24 09:12:51 Количество строк: 21.
+2020.12.24 09:12:51 Строка 8: пустая.
+2020.12.24 09:12:51 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 09:12:51 Строка 10 (длина 23):  *KET +3   >=8.0 mmol/L. Выделен 2-й: nam='KET', val='+3   >=8.0', mgr='mmol/L', attention='*'.
+2020.12.24 09:12:51 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 09:12:51 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 09:12:51 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 09:12:51 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 09:12:51 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:12:51 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 09:12:51 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 09:12:51 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 09:12:51 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:12:51 Строка 20: пустая.
+2020.12.24 09:12:51 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 09:13:49',host_name(),11,61337,'LEU','+-  15','CELL/uL','*','KET','+3   >=8.0','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000019, дата-время: 2020-12-24  09:13:49.'); 
+2020.12.24 09:15:15 Количество строк: 21.
+2020.12.24 09:15:15 Строка 8: пустая.
+2020.12.24 09:15:15 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 09:15:15 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:15:15 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 09:15:15 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 09:15:15 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
+2020.12.24 09:15:15 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 09:15:15 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:15:15 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 09:15:15 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 09:15:15 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 09:15:15 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:15:15 Строка 20: пустая.
+2020.12.24 09:15:15 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 09:16:13',host_name(),11,0,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000020, дата-время: 2020-12-24  09:16:13.'); 
+2020.12.24 09:18:10 Количество строк: 24.
+2020.12.24 09:18:10 Строка 8: пустая.
+2020.12.24 09:18:10 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 09:18:10 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:18:10 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 09:18:10 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 09:18:10 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 09:18:10 Строка 14 (длина 23):   GLU -        0 mmol/L. Выделен 6-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 09:18:10 Строка 15 (длина 23):   PRO -           0 g/L. Выделен 7-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 09:18:10 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 09:18:10 Строка 17 (длина 23):   pH         5.0       . Выделен 9-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 09:18:10 Строка 18 (длина 23):   BLD -       0 CELL/uL. Выделен 10-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 09:18:10 Строка 19 (длина 23):  *Vc  +3     5.6 mmol/L. Выделен 11-й: nam='Vc', val='+3  5.6', mgr='mmol/L', attention='*'.
+2020.12.24 09:18:10 Строка 20 (длина 23):   MA          <=10 mg/L. Выделен 12-й: nam='MA', val='<=10 m', mgr='g/L', attention=' '.
+2020.12.24 09:18:10 Строка 21 (длина 23):  *Ca       <=1.0 mmol/L. Выделен 13-й: nam='Ca', val='<=1.0 mmo', mgr='l/L', attention='*'.
+2020.12.24 09:18:10 Строка 22 (длина 23):  *CR       >=26.4mmol/L. Выделен 14-й: nam='CR', val='>=26.4mmo', mgr='l/L', attention='*'.
+2020.12.24 09:18:10 Строка 23: пустая.
+2020.12.24 09:18:10 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ParamName12,ParamValue12,ParamMsr12,Attention12,ParamName13,ParamValue13,ParamMsr13,Attention13,ParamName14,ParamValue14,ParamMsr14,Attention14,ResultText)VALUES(14,'24-12-2020 09:19:08',host_name(),11,0,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','GLU','-  0','mmol/L',' ','PRO','-     0','g/L',' ','SG','1.030','',' ','pH','5.0','',' ','BLD','-    0','CELL/uL',' ','Vc','+3  5.6','mmol/L','*','MA','<=10 m','g/L',' ','Ca','<=1.0 mmo','l/L','*','CR','>=26.4mmo','l/L','*', 'Номер на анализаторе: 000020, дата-время: 2020-12-24  09:19:08.'); 
+2020.12.24 10:23:39 Количество строк: 21.
+2020.12.24 10:23:39 Строка 8: пустая.
+2020.12.24 10:23:39 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:23:39 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:23:39 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:23:39 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:23:39 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
+2020.12.24 10:23:39 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 10:23:39 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:23:39 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 10:23:39 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:23:39 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 10:23:39 Строка 19 (длина 23):  *Vc  +-     0.6 mmol/L. Выделен 11-й: nam='Vc', val='+-  0.6', mgr='mmol/L', attention='*'.
+2020.12.24 10:23:39 Строка 20: пустая.
+2020.12.24 10:23:39 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:24:37',host_name(),11,61338,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','+-  0.6','mmol/L','*', 'Номер на анализаторе: 000021, дата-время: 2020-12-24  10:24:37.'); 
+2020.12.24 10:25:25 Количество строк: 21.
+2020.12.24 10:25:25 Строка 8: пустая.
+2020.12.24 10:25:25 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:25:25 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:25:25 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:25:25 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:25:25 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:25:25 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:25:25 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:25:25 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 10:25:25 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:25:25 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 10:25:25 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:25:25 Строка 20: пустая.
+2020.12.24 10:25:25 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:26:23',host_name(),11,61348,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000022, дата-время: 2020-12-24  10:26:23.'); 
+2020.12.24 10:27:10 Количество строк: 21.
+2020.12.24 10:27:10 Строка 8: пустая.
+2020.12.24 10:27:10 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:27:10 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:27:10 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:27:10 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:27:10 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:27:10 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:27:10 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:27:10 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 10:27:10 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:27:10 Строка 18 (длина 23):   pH         7.5       . Выделен 10-й: nam='pH', val='7.5', mgr='', attention=' '.
+2020.12.24 10:27:10 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:27:10 Строка 20: пустая.
+2020.12.24 10:27:10 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:28:08',host_name(),11,61352,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','7.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000023, дата-время: 2020-12-24  10:28:08.'); 
+2020.12.24 10:30:46 Количество строк: 21.
+2020.12.24 10:30:46 Строка 8: пустая.
+2020.12.24 10:30:46 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:30:46 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:30:46 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:30:46 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:30:46 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:30:46 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:30:46 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:30:46 Строка 16 (длина 23):   SG         1.020     . Выделен 8-й: nam='SG', val='1.020', mgr='', attention=' '.
+2020.12.24 10:30:46 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:30:46 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 10:30:46 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:30:46 Строка 20: пустая.
+2020.12.24 10:30:46 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:31:44',host_name(),11,61354,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.020','',' ','BLD','-    0','CELL/uL',' ','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000024, дата-время: 2020-12-24  10:31:44.'); 
+2020.12.24 10:32:46 Количество строк: 21.
+2020.12.24 10:32:46 Строка 8: пустая.
+2020.12.24 10:32:46 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:32:46 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:32:46 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:32:46 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:32:46 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:32:46 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:32:46 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:32:46 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 10:32:46 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:32:46 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 10:32:46 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:32:46 Строка 20: пустая.
+2020.12.24 10:32:46 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:33:44',host_name(),11,61355,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000025, дата-время: 2020-12-24  10:33:44.'); 
+2020.12.24 10:38:55 Количество строк: 21.
+2020.12.24 10:38:55 Строка 8: пустая.
+2020.12.24 10:38:55 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:38:55 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:38:55 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:38:55 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:38:55 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:38:55 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:38:55 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:38:55 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 10:38:55 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:38:55 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 10:38:55 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:38:55 Строка 20: пустая.
+2020.12.24 10:38:55 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:39:53',host_name(),11,61357,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000026, дата-время: 2020-12-24  10:39:53.'); 
+2020.12.24 10:41:22 Количество строк: 21.
+2020.12.24 10:41:22 Строка 8: пустая.
+2020.12.24 10:41:22 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:41:22 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:41:22 Строка 11 (длина 23):  *NIT +                . Выделен 3-й: nam='NIT', val='+', mgr='', attention='*'.
+2020.12.24 10:41:22 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:41:22 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:41:22 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 10:41:22 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:41:22 Строка 16 (длина 23):   SG         1.020     . Выделен 8-й: nam='SG', val='1.020', mgr='', attention=' '.
+2020.12.24 10:41:22 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 10:41:22 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 10:41:22 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:41:22 Строка 20: пустая.
+2020.12.24 10:41:22 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:42:19',host_name(),11,61358,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','+','','*','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.020','',' ','BLD','+3 200','CELL/uL','*','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000027, дата-время: 2020-12-24  10:42:19.'); 
+2020.12.24 10:42:58 Количество строк: 21.
+2020.12.24 10:42:58 Строка 8: пустая.
+2020.12.24 10:42:58 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:42:58 Строка 10 (длина 23):  *KET +1     1.5 mmol/L. Выделен 2-й: nam='KET', val='+1  1.5', mgr='mmol/L', attention='*'.
+2020.12.24 10:42:58 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:42:58 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:42:58 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:42:58 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:42:58 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:42:58 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 10:42:58 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:42:58 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 10:42:58 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:42:58 Строка 20: пустая.
+2020.12.24 10:42:58 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:43:55',host_name(),11,61359,'LEU','+-  15','CELL/uL','*','KET','+1  1.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','-    0','CELL/uL',' ','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000028, дата-время: 2020-12-24  10:43:55.'); 
+2020.12.24 10:44:29 Количество строк: 21.
+2020.12.24 10:44:29 Строка 8: пустая.
+2020.12.24 10:44:29 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:44:29 Строка 10 (длина 23):  *KET +1     1.5 mmol/L. Выделен 2-й: nam='KET', val='+1  1.5', mgr='mmol/L', attention='*'.
+2020.12.24 10:44:29 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:44:29 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:44:29 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
+2020.12.24 10:44:29 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 10:44:29 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:44:29 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 10:44:29 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:44:29 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 10:44:29 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:44:29 Строка 20: пустая.
+2020.12.24 10:44:29 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:45:27',host_name(),11,61360,'LEU','+-  15','CELL/uL','*','KET','+1  1.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','-    0','CELL/uL',' ','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000029, дата-время: 2020-12-24  10:45:27.'); 
+2020.12.24 10:45:56 Количество строк: 21.
+2020.12.24 10:45:56 Строка 8: пустая.
+2020.12.24 10:45:56 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:45:56 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:45:56 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:45:56 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:45:56 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:45:56 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:45:56 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:45:56 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 10:45:56 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:45:56 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 10:45:56 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:45:56 Строка 20: пустая.
+2020.12.24 10:45:56 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:46:54',host_name(),11,61361,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000030, дата-время: 2020-12-24  10:46:54.'); 
+2020.12.24 10:49:55 Количество строк: 21.
+2020.12.24 10:49:55 Строка 8: пустая.
+2020.12.24 10:49:55 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:49:55 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-  0.5', mgr='mmol/L', attention='*'.
+2020.12.24 10:49:55 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:49:55 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:49:55 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:49:55 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 10:49:55 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:49:55 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 10:49:55 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 10:49:55 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 10:49:55 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:49:55 Строка 20: пустая.
+2020.12.24 10:49:55 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:50:53',host_name(),11,61351,'LEU','+-  15','CELL/uL','*','KET','+-  0.5','mmol/L','*','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','+3 200','CELL/uL','*','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000031, дата-время: 2020-12-24  10:50:53.'); 
+2020.12.24 10:51:21 Количество строк: 21.
+2020.12.24 10:51:21 Строка 8: пустая.
+2020.12.24 10:51:21 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 10:51:21 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:51:21 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 10:51:21 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 10:51:21 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 10:51:21 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 10:51:21 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:51:21 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
+2020.12.24 10:51:21 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 10:51:21 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 10:51:21 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 10:51:21 Строка 20: пустая.
+2020.12.24 10:51:21 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 10:52:19',host_name(),11,61353,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000032, дата-время: 2020-12-24  10:52:19.'); 
+2020.12.24 11:06:23 Количество строк: 21.
+2020.12.24 11:06:23 Строка 8: пустая.
+2020.12.24 11:06:23 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 11:06:23 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:06:23 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:06:23 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:06:23 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:06:23 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:06:23 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:06:23 Строка 16 (длина 23):   SG         1.020     . Выделен 8-й: nam='SG', val='1.020', mgr='', attention=' '.
+2020.12.24 11:06:23 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:06:23 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 11:06:23 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:06:23 Строка 20: пустая.
+2020.12.24 11:06:23 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:07:21',host_name(),11,61345,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.020','',' ','BLD','-    0','CELL/uL',' ','pH','6.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000033, дата-время: 2020-12-24  11:07:21.'); 
+2020.12.24 11:08:02 Количество строк: 21.
+2020.12.24 11:08:02 Строка 8: пустая.
+2020.12.24 11:08:02 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:08:02 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:08:02 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:08:02 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:08:02 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:08:02 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:08:02 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:08:02 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 11:08:02 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:08:02 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 11:08:02 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:08:02 Строка 20: пустая.
+2020.12.24 11:08:02 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:09:00',host_name(),11,61357,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000034, дата-время: 2020-12-24  11:09:00.'); 
+2020.12.24 11:09:59 Количество строк: 21.
+2020.12.24 11:09:59 Строка 8: пустая.
+2020.12.24 11:09:59 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:09:59 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:09:59 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:09:59 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:09:59 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:09:59 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:09:59 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:09:59 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 11:09:59 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:09:59 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 11:09:59 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:09:59 Строка 20: пустая.
+2020.12.24 11:09:59 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:10:57',host_name(),11,61367,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000034, дата-время: 2020-12-24  11:10:57.'); 
+2020.12.24 11:13:29 Количество строк: 21.
+2020.12.24 11:13:29 Строка 8: пустая.
+2020.12.24 11:13:29 Строка 9 (длина 23):  *LEU +3    500 CELL/uL. Выделен 1-й: nam='LEU', val='+3 500', mgr='CELL/uL', attention='*'.
+2020.12.24 11:13:29 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:13:29 Строка 11 (длина 23):  *NIT +                . Выделен 3-й: nam='NIT', val='+', mgr='', attention='*'.
+2020.12.24 11:13:29 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:13:29 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:13:29 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:13:29 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:13:29 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 11:13:29 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:13:29 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 11:13:29 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:13:29 Строка 20: пустая.
+2020.12.24 11:13:29 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:14:27',host_name(),11,61363,'LEU','+3 500','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','+','','*','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','6.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000035, дата-время: 2020-12-24  11:14:27.'); 
+2020.12.24 11:15:39 Количество строк: 21.
+2020.12.24 11:15:39 Строка 8: пустая.
+2020.12.24 11:15:39 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 11:15:39 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:15:39 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:15:39 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:15:39 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:15:39 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:15:39 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:15:39 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 11:15:39 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:15:39 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 11:15:39 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:15:39 Строка 20: пустая.
+2020.12.24 11:15:39 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:16:37',host_name(),11,61370,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','6.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000036, дата-время: 2020-12-24  11:16:37.'); 
+2020.12.24 11:25:25 Количество строк: 21.
+2020.12.24 11:25:25 Строка 8: пустая.
+2020.12.24 11:25:25 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:25:25 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:25:25 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:25:25 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:25:25 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:25:25 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 11:25:25 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:25:25 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 11:25:25 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:25:25 Строка 18 (длина 23):   pH         5.5       . Выделен 10-й: nam='pH', val='5.5', mgr='', attention=' '.
+2020.12.24 11:25:25 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:25:25 Строка 20: пустая.
+2020.12.24 11:25:25 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:26:23',host_name(),11,61376,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','-    0','CELL/uL',' ','pH','5.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000037, дата-время: 2020-12-24  11:26:23.'); 
+2020.12.24 11:30:00 Количество строк: 21.
+2020.12.24 11:30:00 Строка 8: пустая.
+2020.12.24 11:30:00 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 11:30:00 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:30:00 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:30:00 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:30:00 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:30:00 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:30:00 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:30:00 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 11:30:00 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:30:00 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 11:30:00 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:30:00 Строка 20: пустая.
+2020.12.24 11:30:00 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:30:58',host_name(),11,61365,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000038, дата-время: 2020-12-24  11:30:58.'); 
+2020.12.24 11:35:48 Количество строк: 21.
+2020.12.24 11:35:48 Строка 8: пустая.
+2020.12.24 11:35:48 Строка 9 (длина 23):  *LEU +3    500 CELL/uL. Выделен 1-й: nam='LEU', val='+3 500', mgr='CELL/uL', attention='*'.
+2020.12.24 11:35:48 Строка 10 (длина 23):  *KET +3   >=8.0 mmol/L. Выделен 2-й: nam='KET', val='+3   >=8.0', mgr='mmol/L', attention='*'.
+2020.12.24 11:35:48 Строка 11 (длина 23):  *NIT +                . Выделен 3-й: nam='NIT', val='+', mgr='', attention='*'.
+2020.12.24 11:35:48 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:35:48 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:35:48 Строка 14 (длина 23):  *PRO +1        0.3 g/L. Выделен 6-й: nam='PRO', val='+1  0.3', mgr='g/L', attention='*'.
+2020.12.24 11:35:48 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:35:48 Строка 16 (длина 23):   SG         1.020     . Выделен 8-й: nam='SG', val='1.020', mgr='', attention=' '.
+2020.12.24 11:35:48 Строка 17 (длина 23):  *BLD +1     25 CELL/uL. Выделен 9-й: nam='BLD', val='+1  25', mgr='CELL/uL', attention='*'.
+2020.12.24 11:35:48 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr='', attention=' '.
+2020.12.24 11:35:48 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:35:48 Строка 20: пустая.
+2020.12.24 11:35:48 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:36:46',host_name(),11,61373,'LEU','+3 500','CELL/uL','*','KET','+3   >=8.0','mmol/L','*','NIT','+','','*','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','+1  0.3','g/L','*','GLU','-  0','mmol/L',' ','SG','1.020','',' ','BLD','+1  25','CELL/uL','*','pH','6.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000039, дата-время: 2020-12-24  11:36:46.'); 
+2020.12.24 11:40:54 Количество строк: 21.
+2020.12.24 11:40:54 Строка 8: пустая.
+2020.12.24 11:40:54 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:40:54 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:40:54 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:40:54 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:40:54 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:40:54 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:40:54 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:40:54 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 11:40:54 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:40:54 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 11:40:54 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:40:54 Строка 20: пустая.
+2020.12.24 11:40:54 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:41:52',host_name(),11,61378,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000040, дата-время: 2020-12-24  11:41:52.'); 
+2020.12.24 11:44:03 Количество строк: 21.
+2020.12.24 11:44:03 Строка 8: пустая.
+2020.12.24 11:44:03 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 11:44:03 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:44:03 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:44:03 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:44:03 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:44:03 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:44:03 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:44:03 Строка 16 (длина 23):   SG         1.010     . Выделен 8-й: nam='SG', val='1.010', mgr='', attention=' '.
+2020.12.24 11:44:03 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:44:03 Строка 18 (длина 23):   pH         6.5       . Выделен 10-й: nam='pH', val='6.5', mgr='', attention=' '.
+2020.12.24 11:44:03 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:44:03 Строка 20: пустая.
+2020.12.24 11:44:03 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:45:01',host_name(),11,61379,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.010','',' ','BLD','-    0','CELL/uL',' ','pH','6.5','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000041, дата-время: 2020-12-24  11:45:01.'); 
+2020.12.24 11:46:33 Количество строк: 21.
+2020.12.24 11:46:33 Строка 8: пустая.
+2020.12.24 11:46:33 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:46:33 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:46:33 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 11:46:33 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 11:46:33 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 11:46:33 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 11:46:33 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:46:33 Строка 16 (длина 23):   SG         1.015     . Выделен 8-й: nam='SG', val='1.015', mgr='', attention=' '.
+2020.12.24 11:46:33 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 11:46:33 Строка 18 (длина 23):   pH         7.0       . Выделен 10-й: nam='pH', val='7.0', mgr='', attention=' '.
+2020.12.24 11:46:33 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 11:46:33 Строка 20: пустая.
+2020.12.24 11:46:33 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 11:47:31',host_name(),11,61380,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.015','',' ','BLD','-    0','CELL/uL',' ','pH','7.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000042, дата-время: 2020-12-24  11:47:31.'); 
+2020.12.24 12:02:01 Количество строк: 21.
+2020.12.24 12:02:01 Строка 8: пустая.
+2020.12.24 12:02:01 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-  15', mgr='CELL/uL', attention='*'.
+2020.12.24 12:02:01 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 12:02:01 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 12:02:01 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 12:02:01 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
+2020.12.24 12:02:01 Строка 14 (длина 23):  *PRO +-       0.15 g/L. Выделен 6-й: nam='PRO', val='+-    0.15', mgr='g/L', attention='*'.
+2020.12.24 12:02:01 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 12:02:01 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 12:02:01 Строка 17 (длина 23):  *BLD +3    200 CELL/uL. Выделен 9-й: nam='BLD', val='+3 200', mgr='CELL/uL', attention='*'.
+2020.12.24 12:02:01 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 12:02:01 Строка 19 (длина 23):   Vc  -        0 mmol/L. Выделен 11-й: nam='Vc', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 12:02:01 Строка 20: пустая.
+2020.12.24 12:02:01 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(14,'24-12-2020 12:02:59',host_name(),11,61382,'LEU','+-  15','CELL/uL','*','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','+-    0.15','g/L','*','GLU','-  0','mmol/L',' ','SG','1.030','',' ','BLD','+3 200','CELL/uL','*','pH','5.0','',' ','Vc','-  0','mmol/L',' ', 'Номер на анализаторе: 000043, дата-время: 2020-12-24  12:02:59.'); 
+2020.12.24 12:18:01 --- Завершение работы драйвера анализатора.
+2020.12.24 12:18:49 --- Запуск Uri150 KDL-URINE4 urine4 Версия 1.7.0.130 от 2020.12.24.0904
+2020.12.24 12:23:18 Количество строк: 24.
+2020.12.24 12:23:18 Строка 8: пустая.
+2020.12.24 12:23:18 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 12:23:18 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 12:23:18 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
+2020.12.24 12:23:18 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
+2020.12.24 12:23:18 Строка 13 (длина 23):   BIL -        0 umol/L. Выделен 5-й: nam='BIL', val='-  0', mgr='umol/L', attention=' '.
+2020.12.24 12:23:18 Строка 14 (длина 23):   GLU -        0 mmol/L. Выделен 6-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
+2020.12.24 12:23:18 Строка 15 (длина 23):   PRO -           0 g/L. Выделен 7-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
+2020.12.24 12:23:18 Строка 16 (длина 23):   SG         1.030     . Выделен 8-й: nam='SG', val='1.030', mgr='', attention=' '.
+2020.12.24 12:23:18 Строка 17 (длина 23):   pH         5.0       . Выделен 9-й: nam='pH', val='5.0', mgr='', attention=' '.
+2020.12.24 12:23:18 Строка 18 (длина 23):   BLD -       0 CELL/uL. Выделен 10-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
+2020.12.24 12:23:18 Строка 19 (длина 23):  *Vc  +3     5.6 mmol/L. Выделен 11-й: nam='Vc', val='+3  5.6', mgr='mmol/L', attention='*'.
+2020.12.24 12:23:18 Строка 20 (длина 23):   MA          <=10 mg/L. Выделен 12-й: nam='MA', val='<=10 m', mgr='g/L', attention=' '.
+2020.12.24 12:23:18 Строка 21 (длина 23):  *Ca       <=1.0 mmol/L. Выделен 13-й: nam='Ca', val='<=1.0 mmo', mgr='l/L', attention='*'.
+2020.12.24 12:23:18 Строка 22 (длина 23):  *CR       >=26.4mmol/L. Выделен 14-й: nam='CR', val='>=26.4mmo', mgr='l/L', attention='*'.
+2020.12.24 12:23:18 Строка 23: пустая.
+2020.12.24 12:23:32 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ParamName12,ParamValue12,ParamMsr12,Attention12,ParamName13,ParamValue13,ParamMsr13,Attention13,ParamName14,ParamValue14,ParamMsr14,Attention14,ResultText,CntParam)VALUES(14,'24-12-2020 12:24:07',host_name(),99999,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','-  0','umol/L',' ','GLU','-  0','mmol/L',' ','PRO','-     0','g/L',' ','SG','1.030','',' ','pH','5.0','',' ','BLD','-    0','CELL/uL',' ','Vc','+3  5.6','mmol/L','*','MA','<=10 m','g/L',' ','Ca','<=1.0 mmo','l/L','*','CR','>=26.4mmo','l/L','*', 'Номер на анализаторе: 000044, дата-время: 2020-12-24  12:24:07.',14); 

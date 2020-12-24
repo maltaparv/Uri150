@@ -100,6 +100,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(107, 33);
             this.pictureBox2.TabIndex = 142;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // Lbl_AutoVersion
             // 
@@ -330,11 +331,7 @@
             "002",
             "003",
             "004",
-            "RTBout 1",
-            "RTBout 2",
-            "01. Тест 01.",
-            "02. Тест 02.",
-            "03. test03"});
+            "005"});
             this.CmbTest.Location = new System.Drawing.Point(473, 194);
             this.CmbTest.Name = "CmbTest";
             this.CmbTest.Size = new System.Drawing.Size(189, 21);
@@ -348,6 +345,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(135, 125);
             this.pictureBox1.TabIndex = 114;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // statusStrip1
             // 

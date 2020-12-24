@@ -135,7 +135,7 @@ namespace Uri150
             {
                 this.Hide();
                 notifyIcon1.Visible = true; // иконка в трее видимая
-                notifyIcon1.ShowBalloonTip(1000); // 1 секунду показать предупреждение о сворачивании в трей
+                notifyIcon1.ShowBalloonTip(200); // 2 секунды показать предупреждение о сворачивании в трей
             }
             else if (FormWindowState.Normal == this.WindowState)
             { notifyIcon1.Visible = false; }
@@ -430,11 +430,12 @@ namespace Uri150
                 //int cntAn = 0;
                 cntAn = 0; // номер параметра (результата) для формирования строки SQL - ParamName1 (n=1), ParamValue1, ParamMsr1 ...
                 string sx; // одна (текущая) строчка Line[i] из квиточка
-                string val, nam, mgr, attention;
+                string trouble=""; // анализатор сообщает о проблеме
+                string nam, val, mgr, attention;  // название, значение, ед.изм., флаг внимания
                 for (int i = 8; i < Line.Length; i++)  // не с первой: строки с результатами начинаются с ~8..11-й. FIXME !
                 {
                     sx = Line[i];
-                    if (sx.Trim().Length<=1)    // =1 для последней строки == 03h
+                    if (sx.Trim().Length<=1)    // =1 для первой и последней строки 
                     {
                         msg = $"Строка {i}: пустая.";
                         WLog(msg);
@@ -442,30 +443,36 @@ namespace Uri150
                         continue; // пропускаем пустую строку
                     }
 
-                    nam = sx.Substring(2, 3); // название анализа - 3 символа
-                    val = "";
-                    mgr = "";
-                    attention = sx.Substring(1, 1);  // признак: " " -норма, "*" - результат выходит за референсные значения 
-                    
-                    if (nam == "LEU" | nam == "KET" | nam == "BIL" | nam == "GLU" | nam == "BLD" | nam == "Vc ")
+                    nam = sx.Substring(2, 3);       // название анализа - 3 символа
+                    val = sx.Substring(6).Trim();   // значение (результат)
+                    val = val.Length > 16 ? (val.Substring(0, 16)) : (val);
+                    mgr = "";                       // единицы измерения
+                    attention = sx.Substring(1, 1); // признак: " " -норма, "*" - результат выходит за референсные значения 
+                    trouble = sx.Substring(0, 7);
+
+                    // Новые анализы добавлять в соответствующий список list1,2,3 по способу выделения результатов и ед.изм.
+                    List<string> list1 = new List<string>() { "LEU", "KET", "BIL", "GLU", "BLD", "Vc " };
+                    if (list1.IndexOf(nam) > -1)
                     {
                         val = sx.Substring(5, 11);
                         mgr = sx.Substring(16);
                     }
 
-                    if (nam == "NIT" | nam == "URO" | nam == "SG " | nam == "pH ")
+                    List<string> list2 = new List<string>() { "NIT", "URO", "SG ", "pH " };
+                    if (list2.IndexOf(nam) > -1)
                     {
                         val = sx.Substring(5);
                         mgr = "";
                     }
 
-                    if (nam == "PRO" | nam == "CR " | nam == "MA " | nam == "Ca " | nam == "ACR")
+                    List<string> list3 = new List<string>() { "PRO", "CR ", "MA ", "Ca ", "ACR" };
+                    if (list3.IndexOf(nam) > -1)
                     {
                         val = sx.Substring(5, 15);
                         mgr = sx.Substring(20);
                     }
 
-                    if (val.Length == 0)   // нет результата, ничего не нашли
+                    if (val.Length == 0) // нет результата, ничего не нашли 
                          continue; // пропускаем неопознанную строку
  
                     // логирование белка
@@ -487,16 +494,15 @@ namespace Uri150
                     PivTab[cntAn] = sc + $"{nam};{val};{mgr};";
                 }
 
-                if (cntAn == 0) // нет результата, ничего не нашли
+                if (cntAn == 0 | trouble == "TROUBLE") // нет результата, ничего не нашли или ошибка анализатора 
                 {
-                    //kAn = 0;    // cntAn кол-во выделенных анализов - используется как признак, писАть ли в SQL.
+                    cntAn = 0;    // ещё раз присвоть 0, т.к. используется как признак, писАть ли в SQL. При нуле не пишем.
                     sql1 = ""; sql2 = "";   // SQL строку не формируем 
                     msg = "Не нашли ни одного результата!";
                     Add_RTB(RTBout, "\n"+msg, Color.Red);
                     WLog(msg);
                     return;
                 }
-                //kAn = cntAn;
             }
         }
         // ---
@@ -648,29 +654,13 @@ namespace Uri150
         }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            //pictureBox2.Visible = !pictureBox2.Visible;
+            pictureBox2.Visible = !pictureBox2.Visible;
         }
-
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            //pictureBox2.Visible = !pictureBox2.Visible;
+            pictureBox2.Visible = !pictureBox2.Visible;
         }
-        private void Pic_Cat_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void Lbl_dtm_ver_Click_1(object sender, EventArgs e)
-        {
-            Pic_Cat_Click(sender, e);
-        }
-        private void Pic_An_Click(object sender, EventArgs e)
-        {
-            Pic_Cat_Click(sender, e);
-        }
-        private void Lbl_dtm_ver_Click(object sender, EventArgs e)
-        {
-            Pic_Cat_Click(sender, e);
-        }
         #endregion --- ( Easter eggs :))
         #region --- методы Wlog, WErrLog, WTest;  SetPathLog, Add_RTB, ExitApp...
         private static void SetPathLog()     // нужна, если программа работает много дней и меняется текущая дата //2019-08-06
@@ -886,6 +876,16 @@ namespace Uri150
                 case "002":
                     //4 UBG  Normal 3.4umol/L
                     // 0123456789012345678901
+                    string nam = "Vc ";
+                    List<string> list1 = new List<string>() { "LEU", "KET", "BIL", "GLU", "BLD", "Vc " };
+                    int rc = list1.IndexOf(nam);
+                    if (list1.IndexOf(nam) > -1)
+                        //(nam == "LEU" | nam == "KET" | nam == "BIL" | nam == "GLU" | nam == "BLD" | nam == "Vc ")
+                    {
+                        Add_RTB(RTBout, $"\n nam: {nam}, ---", Color.BlueViolet);
+
+                    }
+                    Add_RTB(RTBout, $"\n rc=: {rc}, ---", Color.BlueViolet);
                     break;
                 case "003":
                     kTest++; dtm = DateTime.Now;
