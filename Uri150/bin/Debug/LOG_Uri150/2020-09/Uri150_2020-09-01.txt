@@ -1,118 +1,0 @@
-2020.09.01 15:02:33 --- Запуск Uri150 ASU-911 user Версия от 31.08.2020 15:44:51 v.2.05.27
-2020.09.01 15:03:05 --- Запуск Uri150 ASU-911 user Версия от 31.08.2020 15:44:51 v.2.05.27
-2020.09.01 15:07:06 --- Запуск Uri150 ASU-911 user Версия от 31.08.2020 15:44:51 v.1.02.14
-2020.09.01 15:11:32 --- Запуск Uri150 ASU-911 user Версия от 01.09.2020 15:11:28 v.1.02.14
-2020.09.01 15:18:17 --- Запуск Uri150 ASU-911 user 01.09.2020 15:18:14
-2020.09.01 15:20:21 --- Запуск Uri150 ASU-911 user 01.09.2020 15:20:18
-2020.09.01 15:23:51 --- Запуск Uri150 ASU-911 user 01.09.2020 15:23:48
-2020.09.01 15:30:34 === 1-й тест. Длина приёма 376 байт, все данные:
-  NO.000008ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:03:53  *LEU +-     15 CELL/uL *KET +-     0.5 mmol/L  NIT -                 *URO +1      33 umol/L *BIL +2      33 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.005       BLD -       0 CELL/uL  pH         6.0        *Vc  +-     0.6 mmol/L
-2020.09.01 15:30:34 Количество строк: 20.
-2020.09.01 15:30:34 Строка 8: пустая.
-2020.09.01 15:30:34 Строка 9 (длина 23):  *LEU +-     15 CELL/uL. Выделен 1-й: nam='LEU', val='+-   15', mgr='CELL/uL'.
-2020.09.01 15:30:34 Строка 10 (длина 23):  *KET +-     0.5 mmol/L. Выделен 2-й: nam='KET', val='+-   0.5', mgr='mmol/L'.
-2020.09.01 15:30:34 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr=''.
-2020.09.01 15:30:34 Строка 12 (длина 23):  *URO +1      33 umol/L. Выделен 4-й: nam='URO', val='+1    33 umol/L', mgr=''.
-2020.09.01 15:30:34 Строка 13 (длина 23):  *BIL +2      33 umol/L. Выделен 5-й: nam='BIL', val='+2    33', mgr='umol/L'.
-2020.09.01 15:30:34 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-       0', mgr='g/L'.
-2020.09.01 15:30:34 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-    0', mgr='mmol/L'.
-2020.09.01 15:30:34 Строка 16 (длина 23):   SG         1.005     . Выделен 8-й: nam='SG', val='1.005', mgr=''.
-2020.09.01 15:30:34 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-     0', mgr='CELL/uL'.
-2020.09.01 15:30:34 Строка 18 (длина 23):   pH         6.0       . Выделен 10-й: nam='pH', val='6.0', mgr=''.
-2020.09.01 15:30:34 Строка 19 (длина 23):  *Vc  +-     0.6 mmol/L. Выделен 11-й: nam='Vc', val='+-   0.6', mgr='mmol/L'.
-2020.09.01 15:30:34 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,ParamName2,ParamValue2,ParamMsr2,ParamName3,ParamValue3,ParamMsr3,ParamName4,ParamValue4,ParamMsr4,ParamName5,ParamValue5,ParamMsr5,ParamName6,ParamValue6,ParamMsr6,ParamName7,ParamValue7,ParamMsr7,ParamName8,ParamValue8,ParamMsr8,ParamName9,ParamValue9,ParamMsr9,ParamName10,ParamValue10,ParamMsr10,ParamName11,ParamValue11,ParamMsr11,ResultText)VALUES(13,'26-08-2020 21:03:53',host_name(),11,40651,'LEU','+-   15','CELL/uL','KET','+-   0.5','mmol/L','NIT','-','','URO','+1    33 umol/L','','BIL','+2    33','umol/L','PRO','-       0','g/L','GLU','-    0','mmol/L','SG','1.005','','BLD','-     0','CELL/uL','pH','6.0','','Vc','+-   0.6','mmol/L', 'Номер на анализаторе: 000008, дата-время: 2020-08-26  21:03:53.'); 
-2020.09.01 15:34:33 === 2-й тест. Длина приёма 378 байт, все данные:
-  NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
-2020.09.01 15:34:33 Количество строк: 21.
-2020.09.01 15:34:33 Строка 8: пустая.
-2020.09.01 15:34:33 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-     0', mgr='CELL/uL'.
-2020.09.01 15:34:33 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-    0', mgr='mmol/L'.
-2020.09.01 15:34:33 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr=''.
-2020.09.01 15:34:33 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr=''.
-2020.09.01 15:34:33 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1   8.6', mgr='umol/L'.
-2020.09.01 15:34:33 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-       0', mgr='g/L'.
-2020.09.01 15:34:33 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-    0', mgr='mmol/L'.
-2020.09.01 15:34:33 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr=''.
-2020.09.01 15:34:33 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-     0', mgr='CELL/uL'.
-2020.09.01 15:34:33 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr=''.
-2020.09.01 15:34:33 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1   1.4', mgr='mmol/L'.
-2020.09.01 15:34:33 Строка 20: пустая.
-2020.09.01 15:34:33 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,ParamName2,ParamValue2,ParamMsr2,ParamName3,ParamValue3,ParamMsr3,ParamName4,ParamValue4,ParamMsr4,ParamName5,ParamValue5,ParamMsr5,ParamName6,ParamValue6,ParamMsr6,ParamName7,ParamValue7,ParamMsr7,ParamName8,ParamValue8,ParamMsr8,ParamName9,ParamValue9,ParamMsr9,ParamName10,ParamValue10,ParamMsr10,ParamName11,ParamValue11,ParamMsr11,ResultText)VALUES(13,'26-08-2020 21:02:14',host_name(),11,40651,'LEU','-     0','CELL/uL','KET','-    0','mmol/L','NIT','-','','URO','Normal','','BIL','+1   8.6','umol/L','PRO','-       0','g/L','GLU','-    0','mmol/L','SG','1.025','','BLD','-     0','CELL/uL','pH','5.0','','Vc','+1   1.4','mmol/L', 'Номер на анализаторе: 000007, дата-время: 2020-08-26  21:02:14.'); 
-2020.09.01 15:42:49 === 3-й тест. Длина приёма 120 байт, все данные:
-  NO.000014ID:0000000040678 Sex:         Age: Color:         Clarity:         2020-08-29  11:01:07TROUBLE-07
-2020.09.01 15:42:49 Количество строк: 9.
-2020.09.01 15:42:49 Строка 8 (длина 10): TROUBLE-07. Выделен 1-й: nam='OUB', val='', mgr=''.
-2020.09.01 15:42:49 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,ResultText)VALUES(13,'29-08-2020 11:01:07',host_name(),11,40678,'OUB','','', 'Номер на анализаторе: 000014, дата-время: 2020-08-29  11:01:07.'); 
-2020.09.01 17:07:25 --- Запуск Uri150 ASU-911 user 01.09.2020 17:07:19
-2020.09.01 17:07:48 === 1-й тест. Длина приёма 378 байт, все данные:
-  NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
-2020.09.01 17:07:48 Количество строк: 21.
-2020.09.01 17:07:48 Строка 8: пустая.
-2020.09.01 17:07:48 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-     0', mgr='CELL/uL'.
-2020.09.01 17:07:48 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-    0', mgr='mmol/L'.
-2020.09.01 17:07:48 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr=''.
-2020.09.01 17:07:48 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr=''.
-2020.09.01 17:07:48 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1   8.6', mgr='umol/L'.
-2020.09.01 17:07:48 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-       0', mgr='g/L'.
-2020.09.01 17:07:48 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-    0', mgr='mmol/L'.
-2020.09.01 17:07:48 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr=''.
-2020.09.01 17:07:48 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-     0', mgr='CELL/uL'.
-2020.09.01 17:07:48 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr=''.
-2020.09.01 17:07:48 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1   1.4', mgr='mmol/L'.
-2020.09.01 17:07:48 Строка 20: пустая.
-2020.09.01 17:07:49 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,ParamName2,ParamValue2,ParamMsr2,ParamName3,ParamValue3,ParamMsr3,ParamName4,ParamValue4,ParamMsr4,ParamName5,ParamValue5,ParamMsr5,ParamName6,ParamValue6,ParamMsr6,ParamName7,ParamValue7,ParamMsr7,ParamName8,ParamValue8,ParamMsr8,ParamName9,ParamValue9,ParamMsr9,ParamName10,ParamValue10,ParamMsr10,ParamName11,ParamValue11,ParamMsr11,ResultText)VALUES(13,'26-08-2020 21:02:14',host_name(),11,40651,'LEU','-     0','CELL/uL','KET','-    0','mmol/L','NIT','-','','URO','Normal','','BIL','+1   8.6','umol/L','PRO','-       0','g/L','GLU','-    0','mmol/L','SG','1.025','','BLD','-     0','CELL/uL','pH','5.0','','Vc','+1   1.4','mmol/L', 'Номер на анализаторе: 000007, дата-время: 2020-08-26  21:02:14.'); 
-2020.09.01 17:07:58 === 2-й тест. Длина приёма 120 байт, все данные:
-  NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
-2020.09.01 17:07:58 Количество строк: 9.
-2020.09.01 17:07:58 Не нашли ни одного результата!
-2020.09.01 17:07:58 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ResultText)VALUES(13,'30-08-2020 13:13:58',host_name(),11,38873, 'Номер на анализаторе: 000012, дата-время: 2020-08-30  13:13:58.'); 
-2020.09.01 17:10:16 --- Запуск Uri150 ASU-911 user 01.09.2020 17:10:13
-2020.09.01 17:10:25 === 1-й тест. Длина приёма 120 байт, все данные:
-  NO.000011ID:0000000038872 Sex:         Age: Color:         Clarity:         2020-08-30  12:44:53TROUBLE-07
-2020.09.01 17:10:26 Количество строк: 9.
-2020.09.01 17:10:26 Не нашли ни одного результата!
-2020.09.01 17:10:26 SQL ,ResultText), 'Номер на анализаторе: 000011, дата-время: 2020-08-30  12:44:53.'); 
-2020.09.01 17:10:26 Ошибка при записи в SQL. Номер истории: 38872, номер теста: 000011.
-System.Data.SqlClient.SqlException: Неправильный синтаксис около конструкции ",".
-   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-   в System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
-   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   в Uri150.Form1.ToSQL(String st) в H:\Uri150\Uri150\Form1.cs:строка 591
-2020.09.01 17:17:02 === 2-й тест. Длина приёма 120 байт, все данные:
-  NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
-2020.09.01 17:17:02 Количество строк: 9.
-2020.09.01 17:17:02 Не нашли ни одного результата!
-2020.09.01 17:24:52 --- Запуск Uri150 ASU-911 user 01.09.2020 17:24:49
-2020.09.01 17:25:14 === 1-й тест. Длина приёма 120 байт, все данные:
-  NO.000011ID:0000000038872 Sex:         Age: Color:         Clarity:         2020-08-30  12:44:53TROUBLE-07
-2020.09.01 17:25:14 Количество строк: 9.
-2020.09.01 17:25:14 Не нашли ни одного результата!
-2020.09.01 17:25:48 === 2-й тест. Длина приёма 378 байт, все данные:
-  NO.000007ID:0000000040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
-2020.09.01 17:25:48 Количество строк: 21.
-2020.09.01 17:25:48 Строка 8: пустая.
-2020.09.01 17:25:48 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-     0', mgr='CELL/uL'.
-2020.09.01 17:25:48 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-    0', mgr='mmol/L'.
-2020.09.01 17:25:48 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr=''.
-2020.09.01 17:25:48 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr=''.
-2020.09.01 17:25:48 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1   8.6', mgr='umol/L'.
-2020.09.01 17:25:48 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-       0', mgr='g/L'.
-2020.09.01 17:25:48 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-    0', mgr='mmol/L'.
-2020.09.01 17:25:48 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr=''.
-2020.09.01 17:25:48 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-     0', mgr='CELL/uL'.
-2020.09.01 17:25:48 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr=''.
-2020.09.01 17:25:48 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1   1.4', mgr='mmol/L'.
-2020.09.01 17:25:48 Строка 20: пустая.
-2020.09.01 17:25:48 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,ParamName2,ParamValue2,ParamMsr2,ParamName3,ParamValue3,ParamMsr3,ParamName4,ParamValue4,ParamMsr4,ParamName5,ParamValue5,ParamMsr5,ParamName6,ParamValue6,ParamMsr6,ParamName7,ParamValue7,ParamMsr7,ParamName8,ParamValue8,ParamMsr8,ParamName9,ParamValue9,ParamMsr9,ParamName10,ParamValue10,ParamMsr10,ParamName11,ParamValue11,ParamMsr11,ResultText)VALUES(13,'26-08-2020 21:02:14',host_name(),11,40651,'LEU','-     0','CELL/uL','KET','-    0','mmol/L','NIT','-','','URO','Normal','','BIL','+1   8.6','umol/L','PRO','-       0','g/L','GLU','-    0','mmol/L','SG','1.025','','BLD','-     0','CELL/uL','pH','5.0','','Vc','+1   1.4','mmol/L', 'Номер на анализаторе: 000007, дата-время: 2020-08-26  21:02:14.'); 
-2020.09.01 17:25:55 === 3-й тест. Длина приёма 120 байт, все данные:
-  NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
-2020.09.01 17:25:55 Количество строк: 9.
-2020.09.01 17:25:55 Не нашли ни одного результата!
-2020.09.01 17:27:07 --- Запуск Uri150 ASU-911 user 01.09.2020 17:27:05
-2020.09.01 17:27:14 === 1-й тест. Длина приёма 120 байт, все данные:
-  NO.000012ID:0000000038873 Sex:         Age: Color:         Clarity:         2020-08-30  13:13:58TROUBLE-09
-2020.09.01 17:27:14 Количество строк: 9.
-2020.09.01 17:27:14 Не нашли ни одного результата!

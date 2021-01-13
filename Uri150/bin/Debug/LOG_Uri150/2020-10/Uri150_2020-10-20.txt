@@ -1,85 +1,0 @@
-2020.10.20 11:13:47 --- Запуск Uri150 ASU-911 user 20.10.2020 11:13:38
-2020.10.20 11:30:16 --- Запуск Uri150 ASU-911 user 20.10.2020 11:30:11
-2020.10.20 11:30:51 --- Выход по меню <Выход>
-2020.10.20 12:25:05 --- хотел выйти, но передумал :) UserClosing No
-2020.10.20 12:25:12 --- Завершение работы драйвера анализатора.
-2020.10.20 12:25:55 --- Запуск Uri150 ASU-911 user 20.10.2020 12:25:52
-2020.10.20 12:26:06 --- хотел выйти, но передумал :) UserClosing No
-2020.10.20 12:26:12 --- Завершение работы драйвера анализатора.
-2020.10.20 12:34:11 --- Запуск Uri150 ASU-911 user 20.10.2020 12:34:07
-2020.10.20 12:40:44 --- Завершение работы драйвера анализатора.
-2020.10.20 12:40:51 --- Запуск Uri150 ASU-911 user 20.10.2020 12:34:07
-2020.10.20 12:40:54 --- Выход по меню <Выход>
-2020.10.20 12:48:55 --- Запуск Uri150 ASU-911 user 20.10.2020 12:48:51
-2020.10.20 12:49:11 --- Выход из меню<Выход>
-2020.10.20 12:50:09 --- Запуск Uri150 ASU-911 user 20.10.2020 12:50:05
-2020.10.20 12:50:17 --- хотел выйти из меню <Выход>, но передумал :) 
-2020.10.20 12:50:24 --- Выход из меню<Выход>
-2020.10.20 12:51:14 --- Запуск Uri150 ASU-911 user 20.10.2020 12:51:11
-2020.10.20 12:51:45 --- хотел выйти из меню <Выход>, но передумал :) 
-2020.10.20 12:51:52 --- Выход из меню<Выход>
-2020.10.20 12:52:00 --- Запуск Uri150 ASU-911 user 20.10.2020 12:51:11
-2020.10.20 12:52:18 --- хотел выйти, но передумал :) UserClosing No
-2020.10.20 12:52:23 --- Завершение работы драйвера анализатора.
-2020.10.20 15:10:46 --- Запуск Uri150 ASU-911 user 20.10.2020 15:10:36
-2020.10.20 15:11:18 --- хотел выйти, но передумал :) UserClosing No
-2020.10.20 15:11:38 --- хотел выйти из меню <Выход>, но передумал :) 
-2020.10.20 15:12:04 --- Завершение работы драйвера анализатора.
-2020.10.20 15:38:47 --- Запуск Uri150 ASU-911 user 20.10.2020 15:38:43
-2020.10.20 15:39:34 --- Завершение работы драйвера анализатора.
-2020.10.20 15:41:47 --- Запуск Uri150 ASU-911 user 20.10.2020 15:41:43
-2020.10.20 15:42:12 --- Завершение работы драйвера анализатора.
-2020.10.20 15:43:08 --- Запуск Uri150 ASU-911 user 20.10.2020 15:43:05
-2020.10.20 15:43:24 --- Завершение работы драйвера анализатора.
-2020.10.20 15:43:44 --- Запуск Uri150 ASU-911 user 20.10.2020 15:43:41
-2020.10.20 15:44:01 --- Завершение работы драйвера анализатора.
-2020.10.20 15:46:04 --- Запуск Uri150 ASU-911 user 20.10.2020 15:46:00
-2020.10.20 15:46:24 --- Завершение работы драйвера анализатора.
-2020.10.20 15:48:31 --- Запуск Uri150 ASU-911 user 20.10.2020 15:48:26
-2020.10.20 15:53:38 === 1-й тест. Длина приёма 378 байт, все данные:
-  NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
-2020.10.20 15:53:39 Количество строк: 21.
-2020.10.20 15:53:39 Строка 8: пустая.
-2020.10.20 15:53:39 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
-2020.10.20 15:53:39 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
-2020.10.20 15:53:39 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
-2020.10.20 15:53:39 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
-2020.10.20 15:53:39 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
-2020.10.20 15:53:39 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
-2020.10.20 15:53:39 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
-2020.10.20 15:53:39 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
-2020.10.20 15:53:39 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
-2020.10.20 15:53:39 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
-2020.10.20 15:53:39 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1  1.4', mgr='mmol/L', attention='*'.
-2020.10.20 15:53:39 Строка 20: пустая.
-2020.10.20 15:53:39 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(13,'26-08-2020 21:02:14',host_name(),11,40651,'LEU','-    0','CELL/uL', ,'KET','-  0','mmol/L', ,'NIT','-','', ,'URO','Normal','', ,'BIL','+1  8.6','umol/L',*,'PRO','-     0','g/L', ,'GLU','-  0','mmol/L', ,'SG','1.025','', ,'BLD','-    0','CELL/uL', ,'pH','5.0','', ,'Vc','+1  1.4','mmol/L',*, 'Номер на анализаторе: 000007, дата-время: 2020-08-26  21:02:14.'); 
-2020.10.20 15:53:50 Ошибка при записи в SQL. Номер истории: 40651, номер теста: 000007.
-System.Data.SqlClient.SqlException: Неправильный синтаксис около конструкции ",".
-   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-   в System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   в System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
-   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   в Uri150.Form1.ToSQL(String st) в H:\Uri150\Uri150\Form1.cs:строка 590
-2020.10.20 16:00:18 --- Завершение работы драйвера анализатора.
-2020.10.20 16:00:31 --- Запуск Uri150 ASU-911 user 20.10.2020 16:00:28
-2020.10.20 16:00:48 === 1-й тест. Длина приёма 378 байт, все данные:
-  NO.00 0 7ID:00 0 0 040651 Sex:         Age: Color:         Clarity:         2020-08-26  21:02:14   LEU -       0 CELL/uL  KET -        0 mmol/L  NIT -                  URO            Normal *BIL +1     8.6 umol/L  PRO -           0 g/L  GLU -        0 mmol/L  SG         1.025       BLD -       0 CELL/uL  pH         5.0        *Vc  +1     1.4 mmol/L  
-2020.10.20 16:00:48 Количество строк: 21.
-2020.10.20 16:00:48 Строка 8: пустая.
-2020.10.20 16:00:48 Строка 9 (длина 23):   LEU -       0 CELL/uL. Выделен 1-й: nam='LEU', val='-    0', mgr='CELL/uL', attention=' '.
-2020.10.20 16:00:48 Строка 10 (длина 23):   KET -        0 mmol/L. Выделен 2-й: nam='KET', val='-  0', mgr='mmol/L', attention=' '.
-2020.10.20 16:00:48 Строка 11 (длина 23):   NIT -                . Выделен 3-й: nam='NIT', val='-', mgr='', attention=' '.
-2020.10.20 16:00:48 Строка 12 (длина 23):   URO            Normal. Выделен 4-й: nam='URO', val='Normal', mgr='', attention=' '.
-2020.10.20 16:00:48 Строка 13 (длина 23):  *BIL +1     8.6 umol/L. Выделен 5-й: nam='BIL', val='+1  8.6', mgr='umol/L', attention='*'.
-2020.10.20 16:00:48 Строка 14 (длина 23):   PRO -           0 g/L. Выделен 6-й: nam='PRO', val='-     0', mgr='g/L', attention=' '.
-2020.10.20 16:00:48 Строка 15 (длина 23):   GLU -        0 mmol/L. Выделен 7-й: nam='GLU', val='-  0', mgr='mmol/L', attention=' '.
-2020.10.20 16:00:48 Строка 16 (длина 23):   SG         1.025     . Выделен 8-й: nam='SG', val='1.025', mgr='', attention=' '.
-2020.10.20 16:00:48 Строка 17 (длина 23):   BLD -       0 CELL/uL. Выделен 9-й: nam='BLD', val='-    0', mgr='CELL/uL', attention=' '.
-2020.10.20 16:00:48 Строка 18 (длина 23):   pH         5.0       . Выделен 10-й: nam='pH', val='5.0', mgr='', attention=' '.
-2020.10.20 16:00:48 Строка 19 (длина 23):  *Vc  +1     1.4 mmol/L. Выделен 11-й: nam='Vc', val='+1  1.4', mgr='mmol/L', attention='*'.
-2020.10.20 16:00:48 Строка 20: пустая.
-2020.10.20 16:00:48 SQL INSERT into AnalyzerResults(Analyzer_id,ResultDate,HostName,CntParam,HistoryNumber,ParamName1,ParamValue1,ParamMsr1,Attention1,ParamName2,ParamValue2,ParamMsr2,Attention2,ParamName3,ParamValue3,ParamMsr3,Attention3,ParamName4,ParamValue4,ParamMsr4,Attention4,ParamName5,ParamValue5,ParamMsr5,Attention5,ParamName6,ParamValue6,ParamMsr6,Attention6,ParamName7,ParamValue7,ParamMsr7,Attention7,ParamName8,ParamValue8,ParamMsr8,Attention8,ParamName9,ParamValue9,ParamMsr9,Attention9,ParamName10,ParamValue10,ParamMsr10,Attention10,ParamName11,ParamValue11,ParamMsr11,Attention11,ResultText)VALUES(13,'26-08-2020 21:02:14',host_name(),11,40651,'LEU','-    0','CELL/uL',' ','KET','-  0','mmol/L',' ','NIT','-','',' ','URO','Normal','',' ','BIL','+1  8.6','umol/L','*','PRO','-     0','g/L',' ','GLU','-  0','mmol/L',' ','SG','1.025','',' ','BLD','-    0','CELL/uL',' ','pH','5.0','',' ','Vc','+1  1.4','mmol/L','*', 'Номер на анализаторе: 000007, дата-время: 2020-08-26  21:02:14.'); 
-2020.10.20 17:09:21 --- хотел выйти, но передумал :) UserClosing No
-2020.10.20 17:11:21 --- Завершение работы драйвера анализатора.
