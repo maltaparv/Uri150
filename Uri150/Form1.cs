@@ -48,8 +48,9 @@ namespace Uri150
         private static int MaxCntAn = 22;  // максимальное кол-во анализов одного пациента, 
                                            // передаваемых в MS-SQL за 1 раз
                                            // (это ограничение структуры AnalyserResults :((  )
-        private static Int64 MaxHistNo;      // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
+        private static Int64 MaxHistNo;    // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
                                            // берётся из .ini-файла
+        private static int LogInterval = 9;// интеравл записи файла LogTimer.txt в секундах (12-я строка в .ini-файле)
         private static string sModes;      // строка списка режимов работы 
                                            // режим: WriteToSQL=Yes или No
                                            // режим: (NoComPort) - работать, даже ели на комп. нет COM-порта
@@ -74,8 +75,8 @@ namespace Uri150
         private readonly string UserName = System.Environment.UserName;
         private readonly string ComputerName = System.Environment.MachineName;
         public SerialPort _serialPort;
-        private string PathIni;         // Путь к ini-файлу (пусть будет там, откуда запуск? пока так!)
-        private static string AppName;  // static т.к. исп. в background-процессе
+        private string PathIni;          // Путь к ini-файлу (пусть будет там, откуда запуск? пока так!)
+        private static string AppName;   // static т.к. исп. в background-процессе
         private static string qkrq = ""; // ToDo запрос о работе ("кукареку") 
         private static string strV1, strV2, strV3, strV4, strV5; // на форме - напоминалки :)
         private static string dateDone = "2020-12-31 23:59";  // дата-время выполнения анализа по часам на анализаторе
@@ -102,6 +103,8 @@ namespace Uri150
             ReadParmsIni();         // берём параметры из ini-файла 
             FormIni();              // установки на форме, которые не делает Visual Studio - IP-адреса
             PortIni();              // начальные установки сом-порта
+            timer1.Interval = LogInterval * 1000;
+            timer1.Start();
         }
         private void FormIni()  // начальный вывод на форму - что прочитали из ini-файла
         {
@@ -110,13 +113,10 @@ namespace Uri150
             string IP = "";
             foreach (string st in list_adr) IP += st + " ";
             Lbl_IP.Text = "IP: " + IP;
-            CmbTest.SelectedIndex = 0;  // первый (нулевой) элемент - текущий, видимый.
-
+            CmbTest.SelectedIndex = 0;   // первый (нулевой) элемент - текущий, видимый.
             notifyIcon1.Visible = false; // невидимая иконка в трее
 
-            // добавляем Эвент или событие по 2му клику мышки, 
-
-            //вызывая функцию  notifyIcon1_MouseDoubleClick
+            // добавляем событие по 2-му клику мышки, вызывая функцию  NotifyIcon1_MouseDoubleClick
             this.notifyIcon1.MouseDoubleClick += new MouseEventHandler(NotifyIcon1_MouseDoubleClick);
 
             // добавляем событие на изменение окна
@@ -140,6 +140,21 @@ namespace Uri150
             else if (FormWindowState.Normal == this.WindowState)
             { notifyIcon1.Visible = false; }
         }
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            // текущую дату-время записать в файл %PathErrLog%\LogTimer.txt (для мониторинга работы прораммы)
+            // каждые 50 сек (установлено на форме в свойствах timer1
+            dt0 = DateTime.Now;
+            string fnLogTimer = PathErrLog + @"\LogTimer.txt";
+            fnLogTimer = Path.GetFullPath(fnLogTimer);
+            FileStream fn = new FileStream(fnLogTimer, FileMode.Create);  // FileMode.Append
+            StreamWriter sw = new StreamWriter(fn, Encoding.GetEncoding(1251));
+            dtm = DateTime.Now;
+            string ss = dtm.ToString("yyyy-MM-dd HH:mm:ss").Replace("-", ".");
+            sw.WriteLine($"{ss} ID: {AnalyzerID}");
+            sw.Close();
+        }
+
         #region --- методы для Com-порта: инициализация (PortIni) и чтения (Sp_DataReceived)
         private delegate void SetTextDeleg(string text);  // Делегат используется для записи в UI control из потока не-UI
         // Все опции для последовательного устройства могут быть отправлены через конструктор класса SerialPort
@@ -561,10 +576,13 @@ namespace Uri150
             Lbl_log.Text = "путь к логам: " + PathLogParm;
             SetPathLog();
             PathErrLog = lines[9];          // 10-я строка 
-            string sRemind = lines[10];  // 11-я строка: флаг изменения режима отображения напоминалок: 1 - показывать, иначе - нет.
+            string sRemind = lines[10];     // 11-я строка: флаг изменения режима отображения напоминалок: 1 - показывать, иначе - нет.
             int.TryParse(sRemind, out F_Remind); // F_Remind == 0 or 1
-                               // 12-я строка: <резерв>
-            qkrq  = lines[12]; // 13-я строка  ToDo ! для ответа на запрос о рaботе = доделать!
+            string sInterval = lines[11];   // 12-я строка: LogInterval
+            int.TryParse(sInterval, out LogInterval);
+            if (LogInterval == 0) LogInterval = 60;
+
+            qkrq = lines[12]; // 13-я строка  ToDo ! для ответа на запрос о рaботе = доделать!
             strV1 = lines[13]; // 14-я строка
             strV2 = lines[14]; // 15-я строка
             strV3 = lines[15]; // 16-я строка
@@ -781,6 +799,10 @@ namespace Uri150
             s += $"PathIni: {PathIni}\n";
             s += sep;
             s += $"Режимы работы: {sModes}\n";
+            s += $"Режимы отладки: {sDebugModes}\n";
+            s += $"Интервал логирования работы: {LogInterval}\n";
+            string sRemind = F_Remind == 1 ? ("включены") : ("выключены");
+            s += $"Напоминалки {sRemind}.\n";
             //s += $"SQL: {nameSQLsrv}, Analyzer_Id: {Analyzer_Id}\n";
             s += sep + "\n\n\n\n";
             DialogResult result = MessageBox.Show(s, "  Параметры в .ini-файле:"
@@ -802,7 +824,6 @@ namespace Uri150
                 WLog("--- хотел выйти из меню <Выход>, но передумал :) ");
             }
         }
-
         private void ОпрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string s = $"Описание драйвера смотрите в файле \n'ДРАЙВЕР АНАЛИЗАТОРА МОЧИ UILIT-150.docx' ";
