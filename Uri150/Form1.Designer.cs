@@ -67,7 +67,6 @@
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.предварительныйпросмотрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -380,8 +379,7 @@
             this.toolStripSeparator1,
             this.печатьToolStripMenuItem,
             this.предварительныйпросмотрToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.выходToolStripMenuItem});
+            this.toolStripSeparator2});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "&Файл";
@@ -450,13 +448,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(230, 6);
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.выходToolStripMenuItem.Text = "Вы&ход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
             // правкаToolStripMenuItem
             // 
@@ -689,7 +680,6 @@
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem предварительныйпросмотрToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem1;

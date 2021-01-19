@@ -50,7 +50,7 @@ namespace Uri150
                                            // (это ограничение структуры AnalyserResults :((  )
         private static Int64 MaxHistNo;    // максимальный номер истории (для ограничения ошибок ввода на анализаторе - там 13 цифр!) 
                                            // берётся из .ini-файла
-        private static int LogInterval = 9;// интеравл записи файла LogTimer.txt в секундах (12-я строка в .ini-файле)
+        private static int LogInterval = 9;// интеравл записи файла LogAlive.txt в секундах (12-я строка в .ini-файле)
         private static string sModes;      // строка списка режимов работы 
                                            // режим: WriteToSQL=Yes или No
                                            // режим: (NoComPort) - работать, даже ели на комп. нет COM-порта
@@ -142,12 +142,12 @@ namespace Uri150
         }
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            // текущую дату-время записать в файл %PathErrLog%\LogTimer.txt (для мониторинга работы прораммы)
+            // текущую дату-время записать в файл %PathErrLog%\LogAlive.txt (для мониторинга работы прораммы)
             // каждые 50 сек (установлено на форме в свойствах timer1
             dt0 = DateTime.Now;
-            string fnLogTimer = PathErrLog + @"\LogTimer.txt";
-            fnLogTimer = Path.GetFullPath(fnLogTimer);
-            FileStream fn = new FileStream(fnLogTimer, FileMode.Create);  // FileMode.Append
+            string fnLogAlive = PathErrLog + @"\LogAlive.txt";
+            fnLogAlive = Path.GetFullPath(fnLogAlive);
+            FileStream fn = new FileStream(fnLogAlive, FileMode.Create);  // FileMode.Append
             StreamWriter sw = new StreamWriter(fn, Encoding.GetEncoding(1251));
             dtm = DateTime.Now;
             string ss = dtm.ToString("yyyy-MM-dd HH:mm:ss").Replace("-", ".");
@@ -776,14 +776,7 @@ namespace Uri150
         {
             // Меню / Сервис / Параметры в.ini - файле:
             string s = "";
-            string nameSQLsrv = connStr.Substring(0, connStr.IndexOf(';'));
             string sep = $"---------------------------------------------------------------------------\n";
-            // 2020-04-07 из надстойки Automatic Version 2
-            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            var assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).FileVersion;
-            var productVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(assemblyLocation).ProductVersion;
-            //s += $"         {sHeader1}\n";
             int n1 = connStr.IndexOf('=') + 1;
             int n2 = connStr.IndexOf(';') - n1;
             s += $"AppName: {AppName}\n";
@@ -800,29 +793,11 @@ namespace Uri150
             s += sep;
             s += $"Режимы работы: {sModes}\n";
             s += $"Режимы отладки: {sDebugModes}\n";
-            s += $"Интервал логирования работы: {LogInterval}\n";
+            s += $"Интервал логирования работы: {LogInterval} сек.\n";
             string sRemind = F_Remind == 1 ? ("включены") : ("выключены");
-            s += $"Напоминалки {sRemind}.\n";
-            //s += $"SQL: {nameSQLsrv}, Analyzer_Id: {Analyzer_Id}\n";
-            s += sep + "\n\n\n\n";
+            s += $"Напоминалки {sRemind}.\n\n";
             DialogResult result = MessageBox.Show(s, "  Параметры в .ini-файле:"
                 , MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // ExitApp("Выход по меню <Выход>");
-            string mess = "Завершение работы драйвера анализатора.";
-            DialogResult result = MessageBox.Show("Вы действительно хотите завершить работу?"
-                , mess, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                ExitApp("Выход из меню<Выход>");
-            }
-            else
-            {
-                WLog("--- хотел выйти из меню <Выход>, но передумал :) ");
-            }
         }
         private void ОпрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
